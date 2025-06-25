@@ -46,6 +46,7 @@
 .linear-gradient-text {
   background: var(--linear-gradient-text);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
@@ -53,6 +54,50 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.flex-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-gap-1 {
+  gap: 0.25rem;
+}
+.flex-gap-2 {
+  gap: 0.5rem;
+}
+.flex-gap-3 {
+  gap: 1rem;
+}
+.section-title {
+  font-size: var(--font-size-header-lg);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  text-transform: uppercase;
+}
+.section-title.light {
+  color: var(--text-color-inverse);
+}
+.text-light {
+  color: var(--text-color-inverse);
+}
+.txt-small {
+  font-size: var(--font-size-small);
+}
+.txt-md {
+  font-size: var(--font-size-normal);
+}
+.txt-lg {
+  font-size: var(--font-size-large);
+}
+.bold {
+  font-weight: var(--font-weight-bold);
+}
+.black {
+  font-weight: var(--font-weight-black);
+}
+.italic {
+  font-style: italic;
 }
 
 body {
@@ -65,17 +110,20 @@ body {
 
   /*grid background*/
   background-image:
-    linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
   background-size: 30px 30px; /* grid spacing */
 }
 section {
   padding-inline: 1rem;
+  width: 100%;
 }
 header {
   display: flex;
   justify-content: center;
   padding: 1rem;
+  position: sticky;
+  top: 0;
 }
 .navbar {
   background-color: var(--secondary-color);
@@ -105,9 +153,11 @@ header {
   font-weight: var(--font-weight-normal);
 }
 .hero-name {
-  font-size: var(--font-size-header-lg);
+  font-size: 5rem;
   font-weight: var(--font-weight-black);
   text-transform: uppercase;
+  line-height: 5rem;
+
 }
 .hero-job {
   font-size: var(--font-size-header);
@@ -119,4 +169,33 @@ header {
 }
 .hero-image {
   max-height: 500px;
+}
+.wave-transition {
+  transform: rotateY(180deg);
+  width: 100%;
+}
+.about-section {
+  background-color: var(--secondary-color);
+  margin-top: -4px;
+  padding-bottom: 1rem;
+}
+.about-content {
+  gap: 5rem;
+  margin-block: 2rem;
+}
+.about-desc p {
+  max-width: 70ch;
+  margin-block: 1rem;
+}
+
+.about-education {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  border-radius: var(--border-radius-lg);
+}
+.about-education .flex-group {
+  margin-top: 1rem;
+}
+.educ-item {
+  gap: 0.25rem;
 }
