@@ -6,7 +6,7 @@
   </header>
 
   <main>
-    <section class="hero-section flex-align">
+    <section class="hero-section flex-align flex-wrap">
       <div class="hero-text">
         <h2 class="hero-greeting">Hello I'm <br />
         <span class="hero-name linear-gradient-text typewriter">Coleen Garcia</span>
@@ -20,7 +20,7 @@
 
     <section class="about-section bg-gradient">
       <h2 class="section-title light">About me</h2>
-      <div class="about-content flex-align">
+      <div class="about-content flex-align flex-wrap">
         <div class="about-desc">
           <p class="text-light">
             My journey into web development began with a love for the arts — from drawing and design to crafting digital visuals. That passion naturally evolved into building user interfaces that are not just functional, but also visually engaging and intuitive.
@@ -50,12 +50,16 @@
     <section class="skills-section">
       <h2 class="section-title linear-gradient-text">Technical Skills</h2>
 
-      <div class="skills-content flex-align">
-        <div class="stack-container box-shadow">
-          <div class="stack flex-gap-2" v-for="tech in skills.frontend">
-            <img class="tech-image" :src="tech.icon" alt="">
-            <span>{{ tech.name }}</span>
+      <div class="skills-content">
+        <div class="stack-container box-shadow" v-for="stack in skills">
+          <h3 class="stack-title">{{ stack.name }}</h3>
+          <div class="tech-wrapper flex-wrap">
+            <div class="stack flex-gap-2" v-for="tech in stack.tech">
+              <img class="tech-image" :src="tech.icon" :alt="`${tech.name} icon`" draggable="false">
+              <span>{{ tech.name }}</span>
+            </div>
           </div>
+          
         </div>
       </div>
     </section>
@@ -91,7 +95,10 @@ const getIcon = (iconName) => {
 }
 
 const skills = {
-  frontend: [
+  frontend:{
+    name: "Front-end",
+    tech:
+    [
     { name: 'Vue.js', icon: getIcon('vue-icon') },
     { name: 'JavaScript', icon: getIcon('js-icon') },
     { name: 'TypeScript', icon: getIcon('ts-icon') },
@@ -102,13 +109,24 @@ const skills = {
     { name: 'CSS3', icon: getIcon('css-icon') },
     { name: 'JQuery', icon: getIcon('jquery-icon') },
     { name: 'SCSS', icon: getIcon('scss-icon') },
-  ],
-  backend: [
+  ]},
+  backend: {
+    name: "Back-end",
+    tech:
+  [
     { name: 'Node.js', icon: getIcon('node-icon') },
     { name: 'Express.js', icon: getIcon('express-icon') },
-    { name: 'MongoDB', icon: getIcon('mongodb-icon') },
+    { name: 'Rest API', icon: getIcon('restapi-icon') },
     { name: 'PostgreSQL', icon: getIcon('postgresql-icon') },
-  ],
+  ]
+  },
+  tools: {
+    name: "Tools & Platforms",
+    tech: [
+    { name: 'Git', icon: getIcon('git-icon') },
+    { name: 'GitHub', icon: getIcon('github-icon') },
+    { name: 'Postman', icon: getIcon('postman-icon') },
+  ]}
 }
 </script>
 
