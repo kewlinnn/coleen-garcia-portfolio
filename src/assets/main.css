@@ -152,13 +152,15 @@ header {
   .navbar-item {
     font-size: var(--font-size-normal);
     font-weight: var(--font-weight-bold);
+    padding: 0.5rem 1rem;
   }
   .navbar-item:hover {
-    color: var(--accent-color);
     cursor: pointer;
+    background: rgba(255, 255, 255, 0.445);
+    border-radius: var(--border-radius-full);
   }
   .navbar-item:active {
-    color: var(--accent-color-light);
+    color: var(--secondary-color);
   }
 .hero-section {
   gap: 6rem;
