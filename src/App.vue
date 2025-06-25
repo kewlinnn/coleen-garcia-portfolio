@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav class="navbar">
+    <nav class="navbar box-shadow">
         <span class="navbar-item" v-for="item in navbarItems" key="item.name">{{ item.name }}</span>
     </nav>
   </header>
@@ -104,10 +104,10 @@ const skills = {
     { name: 'SCSS', icon: getIcon('scss-icon') },
   ],
   backend: [
-    { name: 'Node.js', icon: 'node-icon' },
-    { name: 'Express.js', icon: 'express-icon' },
-    { name: 'MongoDB', icon: 'mongodb-icon' },
-    { name: 'MySQL', icon: 'mysql-icon' }
+    { name: 'Node.js', icon: getIcon('node-icon') },
+    { name: 'Express.js', icon: getIcon('express-icon') },
+    { name: 'MongoDB', icon: getIcon('mongodb-icon') },
+    { name: 'PostgreSQL', icon: getIcon('postgresql-icon') },
   ],
 }
 </script>
