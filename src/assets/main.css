@@ -2,13 +2,17 @@
   --primary-color: #f4f4f4;
   --secondary-color: #A04747;
   --accent-color: #D8A25E;
+  --accent-color-light: #EEDF7A;
 
   --soft-black: #343131;
   --dark-black: #1a1a1a;
   --bright-white: #ffffff;
 
   --font-family: System UI, sans-serif;
-  --font-size: 16px;
+  --font-size-normal: 16px;
+  --font-size-large: 18px;
+  --font-size-small: 14px;
+  --font-size-header: 20px;
 
   --text-color-primary: #343131;
   --text-color-secondary: #6c757d;
@@ -16,7 +20,13 @@
   --text-color-inverse: #f4f4f4;
 
   --border-radius: 0.25rem;
+  --border-radius-lg: 0.5rem;
+  --border-radius-full: 9999px;
   --box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
 }
 
 /*CSS reset*/
@@ -29,11 +39,37 @@
   margin: 0;
 }
 
+
 body {
   font-family: var(--font-family);
   font-size: var(--font-size);
   color: var(--text-color-primary);
   background-color: var(--primary-color);
+  font-weight: var(--font-weight-normal);
   margin: 0;
-  padding: 0;
 }
+header {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.navbar {
+  background-color: var(--secondary-color);
+  color: var(--text-color-inverse);
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 1rem;
+  border-radius: var(--border-radius-full);
+  width: fit-content;
+}
+  .navbar-item {
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-bold);
+  }
+  .navbar-item:hover {
+    color: var(--accent-color);
+    cursor: pointer;
+  }
+  .navbar-item:active {
+    color: var(--accent-color-light);
+  }
