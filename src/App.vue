@@ -18,7 +18,7 @@
     </section>
     <img src="../src/assets/images/wave.svg" alt="wave transition" class="wave-transition" draggable="false" />
 
-    <section class="about-section">
+    <section class="about-section bg-gradient">
       <h2 class="section-title light">About me</h2>
       <div class="about-content flex-align">
         <div class="about-desc">
@@ -29,7 +29,7 @@
             I specialize in creating responsive websites and mobile apps using Vue.js, React Native, and design tools like Figma and Canva. I thrive on transforming ideas into seamless digital experiences. Whether it’s designing wireframes or implementing interactive features, I aim to make every project both beautiful and usable.
           </p>
         </div>
-        <div class="about-education">
+        <div class="about-education box-shadow">
           <p class="txt-lg bold">Bachelor of Science in Computer Science</p>
           <p class="txt-md bold">Technological University of the Philippines</p>
           <p class="txt-sm italic">Cum Laude</p>
@@ -42,6 +42,19 @@
               <LocationIcon :color="colors.softBlack" />
               <span>Manila, Philippines</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills-section">
+      <h2 class="section-title linear-gradient-text">Technical Skills</h2>
+
+      <div class="skills-content flex-align">
+        <div class="stack-container box-shadow">
+          <div class="stack flex-gap-2" v-for="tech in skills.frontend">
+            <img class="tech-image" :src="tech.icon" alt="">
+            <span>{{ tech.name }}</span>
           </div>
         </div>
       </div>
@@ -69,6 +82,33 @@ const colors = {
   softBlack: "#343131",
   darkBlack: "#1a1a1a",
   brightWhite: "#ffffff"
+}
+
+const ICON_BASE_SRC = '../src/assets/images/';
+
+const getIcon = (iconName) => {
+  return `${ICON_BASE_SRC}${iconName}.png`;
+}
+
+const skills = {
+  frontend: [
+    { name: 'Vue.js', icon: getIcon('vue-icon') },
+    { name: 'JavaScript', icon: getIcon('js-icon') },
+    { name: 'TypeScript', icon: getIcon('ts-icon') },
+    { name: 'Bootstrap', icon: getIcon('bootstrap-icon') },
+    { name: 'React', icon: getIcon('react-icon')},
+    { name: 'React Native', icon: getIcon('react-native-icon') },
+    { name: 'HTML5', icon: getIcon('html-icon') },
+    { name: 'CSS3', icon: getIcon('css-icon') },
+    { name: 'JQuery', icon: getIcon('jquery-icon') },
+    { name: 'SCSS', icon: getIcon('scss-icon') },
+  ],
+  backend: [
+    { name: 'Node.js', icon: 'node-icon' },
+    { name: 'Express.js', icon: 'express-icon' },
+    { name: 'MongoDB', icon: 'mongodb-icon' },
+    { name: 'MySQL', icon: 'mysql-icon' }
+  ],
 }
 </script>
 
