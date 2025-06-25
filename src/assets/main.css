@@ -1,0 +1,39 @@
+:root {
+  --primary-color: #f4f4f4;
+  --secondary-color: #A04747;
+  --accent-color: #D8A25E;
+
+  --soft-black: #343131;
+  --dark-black: #1a1a1a;
+  --bright-white: #ffffff;
+
+  --font-family: System UI, sans-serif;
+  --font-size: 16px;
+
+  --text-color-primary: #343131;
+  --text-color-secondary: #6c757d;
+  --text-color-accent: #D8A25E;
+  --text-color-inverse: #f4f4f4;
+
+  --border-radius: 0.25rem;
+  --box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/*CSS reset*/
+/* Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--text-color-primary);
+  background-color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+}
