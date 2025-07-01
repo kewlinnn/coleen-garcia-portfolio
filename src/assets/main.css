@@ -25,7 +25,8 @@
   --border-radius: 0.25rem;
   --border-radius-lg: 0.5rem;
   --border-radius-full: 9999px;
-  --box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  --box-shadow-2: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  --box-shadow-1: box-shadow: 0 0 10px rgba(0,0,0,0.1);
 
   --font-weight-normal: 400;
   --font-weight-bold: 700;
@@ -54,7 +55,7 @@
   background: #3A1A1A;
   background: linear-gradient(0deg, rgba(58, 26, 26, 1) 0%, rgba(160, 71, 71, 1) 100%);
 }
-.box-shadow {
+.bs {
   box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.3);
   -webkit-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.3);
   -moz-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.3);
@@ -63,6 +64,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.fs-1 {
+  font-size: var(--font-size-normal);
+}
+.fs-2 {
+  font-size: var(--font-size-large);
+}
+.fs-3 {
+  font-size: var(--font-size-header);
+}
+.fw-1 {
+  font-weight: var(--font-weight-normal);
+}
+.fw-2 {
+  font-weight: var(--font-weight-bold);
+}
+.fw-3 {
+  font-weight: var(--font-weight-black);
+}
+.fc-secondary {
+  color: var(--secondary-color);
 }
 .flex-group {
   display: flex;
@@ -245,3 +267,94 @@ header {
   height: 3rem;
   width: auto;
 }
+
+/* timeline styles */
+    .timeline {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: #A04747;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+
+    .timeline-item {
+      padding: 1rem 2rem;
+      position: relative;
+      width: 50%;
+    }
+
+    .timeline-item::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background-color: #A04747;
+      border: 4px solid white;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .left {
+      left: 0;
+    }
+
+    .right {
+      left: 50%;
+    }
+
+    .right::after {
+      left: -10px;
+    }
+
+    .timeline-content {
+      padding: 1.5rem;
+      background-color: var(--primary-color);
+      position: relative;
+      border: 1px solid var(--secondary-color);
+      border-radius: var(--border-radius-lg);
+    }
+
+    .timeline-content h3 {
+      margin-top: 0;
+      color: #A04747;
+    }
+    .internship-description {
+      margin-top: 1.5rem;
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+    .internship-description li {
+      margin-bottom: 0.5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 20px;
+      }
+
+      .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 25px;
+      }
+
+      .timeline-item::after {
+        left: 15px;
+      }
+
+      .right {
+        left: 0%;
+      }
+    }

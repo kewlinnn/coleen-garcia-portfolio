@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav class="navbar box-shadow">
+    <nav class="navbar bs">
         <span class="navbar-item" v-for="item in navbarItems" key="item.name">{{ item.name }}</span>
     </nav>
   </header>
@@ -29,7 +29,7 @@
             I specialize in creating responsive websites and mobile apps using Vue.js, React Native, and design tools like Figma and Canva. I thrive on transforming ideas into seamless digital experiences. Whether it’s designing wireframes or implementing interactive features, I aim to make every project both beautiful and usable.
           </p>
         </div>
-        <div class="about-education box-shadow">
+        <div class="about-education bs">
           <p class="txt-lg bold">Bachelor of Science in Computer Science</p>
           <p class="txt-md bold">Technological University of the Philippines</p>
           <p class="txt-sm italic">Cum Laude</p>
@@ -51,7 +51,7 @@
       <h2 class="section-title linear-gradient-text">Technical Skills</h2>
 
       <div class="skills-content">
-        <div class="stack-container box-shadow" v-for="stack in skills">
+        <div class="stack-container bs" v-for="stack in skills">
           <h3 class="stack-title">{{ stack.name }}</h3>
           <div class="tech-wrapper flex-wrap">
             <div class="stack flex-gap-2" v-for="tech in stack.tech">
@@ -59,7 +59,27 @@
               <span>{{ tech.name }}</span>
             </div>
           </div>
-          
+        </div>
+      </div>
+    </section>
+
+    <section class="internship-section">
+      <h2 class="section-title linear-gradient-text">Internship Experience</h2>
+      
+      <div class="timeline">
+        <div v-for="internship in internships" :key="internship.title"
+        class="timeline-item"
+        :class="internship.timelinePosition"
+        >
+          <div class="timeline-content bs">
+              <h3 class="linear-gradient-text">{{ internship.title }}</h3>
+              <h4 class="fs-1 fc-secondary">{{ internship.company }}</h4>
+              <h5 class="fs-1 fw-1">{{ internship.duration }}</h5>
+              <h5 class="fs-1 fw-1">{{ internship.location }} | {{ internship.classification }}</h5>
+              <ul class="internship-description">
+                <li v-for="bullet in internship.description">{{ bullet }}</li>
+              </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -128,6 +148,35 @@ const skills = {
     { name: 'Postman', icon: getIcon('postman-icon') },
   ]}
 }
+
+const internships = [
+  {
+    timelinePosition: 'left',
+    title: 'Front-end Developer',
+    company: 'Digiplus Interactive Corp.',
+    duration: 'Mar 2025 - Jun 2025',
+    location: 'Taguig City, Philippines',
+    classification: 'On-site',
+    description: [
+      "Developed responsive internal registration website using Vue.js, TypeScript, and Element Plus UI library to streamline user onboarding and data entry",
+      "Integrated RESTful APIs using Axios to build dynamic data tables, search filters, and pagination components.",
+      "Collaborated in an Agile environment, and received hands-on mentorship from senior developers, enhancing proficiency in debugging, and version control with Git and GitHub."
+    ]
+  },
+  {
+    timelinePosition: 'right',
+    title: 'Technical (Web and Mobile Developer)',
+    company: 'VisibleTeam',
+    duration: 'Mar 2024 - Oct 2024',
+    location: 'New York, USA',
+    classification: 'Remote',
+    description: [
+      "Developed user interfaces for a web-based team collaboration app using Vue.js.",
+      "Created and iterated on wireframes and UI prototypes in Figma to improve user experience based on feedback",
+      "Integrated RESTful APIs to enable real-time updates and user authentication, enhancing data synchronization across devices."
+    ]
+  }
+]
 </script>
 
 <style scoped>
