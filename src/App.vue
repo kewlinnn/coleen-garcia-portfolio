@@ -83,6 +83,19 @@
         </div>
       </div>
     </section>
+
+    <section class="projects-section bg-gradient">
+      <h2 class="section-title fc-inverse">Projects</h2>
+      <div class="card-container">
+        <div v-for="project in projects" class="card bs">
+          <h3> {{ project.title }}</h3>
+          <h4> {{ project.type }}</h4>
+          <span v-for="stack in project.stack"> {{ stack }}</span>
+          <p>{{ project.description }}</p>
+        </div>
+      </div>
+      
+    </section>
   </main>
 </template>
 
@@ -175,6 +188,27 @@ const internships = [
       "Created and iterated on wireframes and UI prototypes in Figma to improve user experience based on feedback",
       "Integrated RESTful APIs to enable real-time updates and user authentication, enhancing data synchronization across devices."
     ]
+  }
+]
+
+const projects = [
+  {
+    title: 'E-AcadEase ETEEAP Academic Progress Monitoring System with Chatbot',
+    type: 'Thesis',
+    stack: ['HTML', 'CSS', 'JavaScript', 'Python', 'Flask', 'SQLite'],
+    description: 'A web application for monitoring student applications, academic progress, and instructor compensation, with an integrated chatbot to assist with academic-related queries.'
+  },
+  {
+    title: 'Keno Plus',
+    type: 'Bootcamp Project',
+    stack: ['Vue', 'TypeScript', 'Pinia', 'CSS', 'Element Plus'],
+    description: 'An interactive Keno lottery game with classic and mini game modes.'
+  },
+  {
+    title: 'DexHub',
+    type: 'Personal Project',
+    stack: ['HTML', 'CSS', 'JavaScript', 'EJS', 'Node.js', 'Express.js', 'PokeAPI'],
+    description: 'A dynamic Pokédex web app using PokeAPI to display and filter Pokémon data with server-side rendering.'
   }
 ]
 </script>
