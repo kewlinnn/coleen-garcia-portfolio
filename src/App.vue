@@ -207,8 +207,14 @@ const projects = [
   {
     title: 'DexHub',
     type: 'Personal Project',
-    stack: ['HTML', 'CSS', 'JavaScript', 'EJS', 'Node.js', 'Express.js', 'PokeAPI'],
+    stack: ['HTML', 'CSS', 'EJS', 'Node.js', 'Express.js', 'PokeAPI'],
     description: 'A dynamic Pokédex web app using PokeAPI to display and filter Pokémon data with server-side rendering.'
+  },
+  {
+    title: 'BLOGIT',
+    type: 'Personal Project',
+    stack: ['HTML', 'CSS', 'EJS', 'Node.js', 'Express.js'],
+    description: 'A blogging platform that allows users to create, edit, and share their blog posts.'
   }
 ]
 </script>
