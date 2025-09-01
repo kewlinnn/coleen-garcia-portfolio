@@ -373,6 +373,10 @@ header {
   padding: 1rem;
   border-radius: var(--border-radius-lg);
   transition: transform 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+
 }
 .card:hover {
   transform: translateY(-5px);
@@ -387,10 +391,27 @@ header {
   user-select: none;
   box-shadow: var(--box-shadow-2);
 }
+.project-type {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+.tech-stack {
+  margin-bottom: 1rem;
+  font-size: var(--font-size-small);
+  font-style: italic;
+  color: var(--text-color-secondary);
+}
+.project-description {
+  flex-grow: 1;
+  color: var(--text-color-primary);
+  font-size: var(--font-size-normal);
+}
+
 .links {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+  font-size: var(--font-size-small);
 }
 .live-demo, .github-project {
   text-decoration: none;

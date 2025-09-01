@@ -90,9 +90,12 @@
         <div v-for="project in projects" class="card bs">
           <img :src="project.image" :alt="`${project.title} thumbnail`" class="project-image" draggable="false"/>
           <h3> {{ project.title }}</h3>
-          <h4> {{ project.type }}</h4>
-          <span v-for="stack in project.stack" class="stack-item"> {{ stack }}, </span>
-          <p>{{ project.description }}</p>
+          <h4 class="project-type"> {{ project.type }}</h4>
+          <div class="tech-stack">
+            <span v-for="stack in project.stack" class="stack-item"> {{ stack }}, </span>
+          </div>
+
+          <p class="project-description">{{ project.description }}</p>
 
           <div class="links">
             <a :href="project.link" target="_blank" class="live-demo">Live Demo</a>
