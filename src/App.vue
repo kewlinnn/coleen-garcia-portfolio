@@ -108,10 +108,10 @@
     <section class="socials-section">
       <h2 class="section-title linear-gradient-text">Let's Connect!</h2>
 
-      <div class="social-content">
+      <div class="social-content flex-align">
         <div class="social-details">
           <div class="social-item">
-            <h3>Social Media</h3>
+            <h3 class="social-title">Social Media</h3>
             <div class="stack-container bs item-content">
               <a href="https://www.linkedin.com/in/coleenagarcia" target="_blank">
                 <img src="./assets/images/socials-logo/linkedin.png" alt="linkedin logo">
@@ -122,21 +122,21 @@
             </div>
           </div>
           <div class="social-item">
-            <h3>Location</h3>
+            <h3 class="social-title">Location</h3>
             <p class="stack-container bs item-content ">
               <LocationIcon/>
               Pasig, Metro Manila, Philippines</p>
           </div>
           <div class="social-item">
-            <h3>Response Time</h3>
+            <h3 class="social-title">Response Time</h3>
             <p class="stack-container bs item-content">I typically respond within 1–2 business days. Looking forward to connecting with you!</p>
           </div>
         </div>
   
         <div class="contact-form">
-          <h3>Send a message</h3>
-  
-          <form action="submit" method="post" class="form-details stack-container">
+          <h3 class="social-title txt-center">Send a message</h3>
+
+          <form action="submit" method="post" class="stack-container form-details">
             <label for="user-name">Name</label>
             <input type="text" id="user-name" name="user-name" placeholder="Your Name" required></input>
   
@@ -147,7 +147,7 @@
             <textarea name="user-message" id="user-message" placeholder="Your message goes here..." rows="5" required></textarea>
   
             <button type="submit" class="form-btn">Send Message</button>
-            <p>I value your privacy. Your information will never be shared with third parties.</p>
+            <p class="txt-center txt-small">I value your privacy. Your information will never be shared with third parties.</p>
           </form>
         </div>
       </div>
