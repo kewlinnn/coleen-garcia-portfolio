@@ -107,6 +107,50 @@
 
     <section class="socials-section">
       <h2 class="section-title linear-gradient-text">Let's Connect!</h2>
+
+      <div class="social-content">
+        <div class="social-details">
+          <div class="social-item">
+            <h3>Social Media</h3>
+            <div class="social-item">
+              <a href="https://www.linkedin.com/in/coleenagarcia" target="_blank">
+                <img src="./assets/images/socials-logo/linkedin.png" alt="linkedin logo">
+              </a>
+              <a href="https://github.com/kewlinnn" target="_blank">
+                <img src="./assets/images/socials-logo/github.png" alt="github logo">
+              </a>
+            </div>
+          </div>
+          <div class="social-item">
+            <h3>Location</h3>
+            <p class="item-content">
+              <LocationIcon/>
+              Pasig, Metro Manila, Philippines</p>
+          </div>
+          <div class="social-item">
+            <h3>Response Time</h3>
+            <p class="item-content">I typically respond within 1–2 business days. Looking forward to connecting with you!</p>
+          </div>
+        </div>
+  
+        <div class="contact-form">
+          <h3>Send a message</h3>
+  
+          <form action="submit" method="post">
+            <label for="user-name">Name</label>
+            <input type="text" id="user-name" name="user-name" placeholder="Your Name" required></input>
+  
+            <label for="user-email">Email</label>
+            <input type="email" id="user-email" name="user-email" placeholder="example@email.com" required></input>
+  
+            <label for="user-message">Message</label>
+            <textarea name="user-message" id="user-message" placeholder="Your message goes here..." rows="5" required></textarea>
+  
+            <button type="submit">Send Message</button>
+            <p>I value your privacy. Your information will never be shared with third parties.</p>
+          </form>
+        </div>
+      </div>
     </section>
   </main>
 </template>
