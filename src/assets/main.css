@@ -376,5 +376,42 @@ header {
 }
 .card:hover {
   transform: translateY(-5px);
-  transform: scale(1.05);
+  transform: scale(1.02);
+  box-shadow: 0 0 0.5rem rgba(255, 240, 27, 0.842);
 }
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-lg);
+  margin-bottom: 1rem;
+  user-select: none;
+  box-shadow: var(--box-shadow-2);
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.live-demo, .github-project {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: var(--font-weight-bold);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.live-demo {
+  background-color: var(--secondary-color);
+  color: var(--text-color-inverse);
+}
+  .live-demo:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color-inverse);
+  }
+.github-project {
+  background-color: var(--accent-color);
+  color: var(--text-color-inverse);
+}
+  .github-project:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color-inverse);
+  }

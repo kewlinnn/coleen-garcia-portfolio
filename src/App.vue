@@ -88,10 +88,16 @@
       <h2 class="section-title fc-inverse">Projects</h2>
       <div class="card-container">
         <div v-for="project in projects" class="card bs">
+          <img :src="project.image" :alt="`${project.title} thumbnail`" class="project-image" draggable="false"/>
           <h3> {{ project.title }}</h3>
           <h4> {{ project.type }}</h4>
-          <span v-for="stack in project.stack"> {{ stack }}</span>
+          <span v-for="stack in project.stack" class="stack-item"> {{ stack }}, </span>
           <p>{{ project.description }}</p>
+
+          <div class="links">
+            <a :href="project.link" target="_blank" class="live-demo">Live Demo</a>
+            <a :href="project.github" target="_blank" class="github-project">GitHub</a>
+          </div>
         </div>
       </div>
       
@@ -192,29 +198,38 @@ const internships = [
 ]
 
 const projects = [
-  {
-    title: 'E-AcadEase ETEEAP Academic Progress Monitoring System with Chatbot',
-    type: 'Thesis',
-    stack: ['HTML', 'CSS', 'JavaScript', 'Python', 'Flask', 'SQLite'],
-    description: 'A web application for monitoring student applications, academic progress, and instructor compensation, with an integrated chatbot to assist with academic-related queries.'
-  },
+  // {
+  //   title: 'E-AcadEase ETEEAP Academic Progress Monitoring System with Chatbot',
+  //   type: 'Thesis',
+  //   stack: ['HTML', 'CSS', 'JavaScript', 'Python', 'Flask', 'SQLite'],
+  //   description: 'A web application for monitoring student applications, academic progress, and instructor compensation, with an integrated chatbot to assist with academic-related queries.'
+  // },
   {
     title: 'Keno Plus',
     type: 'Bootcamp Project',
     stack: ['Vue', 'TypeScript', 'Pinia', 'CSS', 'Element Plus'],
-    description: 'An interactive Keno lottery game with classic and mini game modes.'
+    description: 'An interactive Keno lottery game with classic and mini game modes.',
+    image: '../src/assets/images/project-thumbnails/keno-plus.jpg',
+    link: 'https://keno-plus.vercel.app/',
+    github:'https://github.com/kewlinnn/keno-plus',
   },
   {
     title: 'DexHub',
     type: 'Personal Project',
     stack: ['HTML', 'CSS', 'EJS', 'Node.js', 'Express.js', 'PokeAPI'],
-    description: 'A dynamic Pokédex web app using PokeAPI to display and filter Pokémon data with server-side rendering.'
+    description: 'A dynamic Pokédex web app using PokeAPI to display and filter Pokémon data with server-side rendering.',
+    image: '../src/assets/images/project-thumbnails/dexhub.jpg',
+    link: 'https://dexhub.onrender.com/',
+    github:'https://github.com/kewlinnn/dexhub',
   },
   {
     title: 'BLOGIT',
     type: 'Personal Project',
     stack: ['HTML', 'CSS', 'EJS', 'Node.js', 'Express.js'],
-    description: 'A blogging platform that allows users to create, edit, and share their blog posts.'
+    description: 'A blogging platform that allows users to create, edit, and share their blog posts.',
+    image: '../src/assets/images/project-thumbnails/blogit.jpg',
+    link: 'https://blogit-osvi.onrender.com/',
+    github:'https://github.com/kewlinnn/blog-it',
   }
 ]
 </script>
