@@ -193,6 +193,7 @@ header {
   }
 .hero-section {
   gap: 6rem;
+  padding-block: 0.678rem;
 }
 .hero-greeting {
   font-size: var(--font-size-header);
