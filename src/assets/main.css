@@ -381,7 +381,6 @@ header {
 .card:hover {
   transform: translateY(-5px);
   transform: scale(1.02);
-  box-shadow: 0 0 0.5rem rgba(255, 240, 27, 0.842);
 }
 .project-image {
   width: 100%;
