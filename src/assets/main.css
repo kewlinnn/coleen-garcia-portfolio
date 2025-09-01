@@ -420,7 +420,7 @@ header {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .live-demo {
-  background-color: var(--secondary-color);
+  background-color: var(--text-color-secondary);
   color: var(--text-color-inverse);
 }
   .live-demo:hover {
@@ -428,7 +428,7 @@ header {
     color: var(--text-color-inverse);
   }
 .github-project {
-  background-color: var(--accent-color);
+  background-color: var(--text-color-primary);
   color: var(--text-color-inverse);
 }
   .github-project:hover {
