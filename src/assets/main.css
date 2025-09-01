@@ -464,8 +464,43 @@ header {
   background-color: #a0474734;
   color: var(--text-color-primary);
 }
+.form-details textarea {
+  resize: none;
+}
 .form-details input:focus, .form-details textarea:focus {
   outline: 2px solid var(--accent-color);
   background-color: #a0474710;
   color: var(--text-color-primary);
+}
+/* .form-btn {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 50%, rgba(160, 71, 71, 1) 100%);
+  border: none;
+  color: var(--text-color-inverse);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-normal);
+  padding: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+.form-btn:hover {
+  background: var(--secondary-color);
+} */
+
+.form-btn {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(160, 71, 71, 1) 100%);
+  background-size: 200% 100%;
+  background-position: left;
+  border: none;
+  color: var(--text-color-inverse);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-normal);
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-position 0.4s ease-in-out, transform 0.0.4s ease;
+}
+.form-btn:hover {
+  background-position: right;
+}
+.form-btn:active {
+  transform: translateY(2px); /* reset lift on click */
 }
