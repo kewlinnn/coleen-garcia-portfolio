@@ -362,10 +362,15 @@ header {
       }
     }
 
+.projects-section {
+  border: 1px solid yellow;
+  padding-block: 2rem;
+}
 .card-container {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-bottom: 3rem;
 
 }
 .card {
@@ -432,6 +437,6 @@ header {
   color: var(--text-color-inverse);
 }
   .github-project:hover {
-  background-color: var(--secondary-color);
-  color: var(--text-color-inverse);
+    background-color: var(--secondary-color);
+    color: var(--text-color-inverse);
   }

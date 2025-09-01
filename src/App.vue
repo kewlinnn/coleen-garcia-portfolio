@@ -103,7 +103,10 @@
           </div>
         </div>
       </div>
-      
+    </section>
+
+    <section class="socials-section">
+      <h2 class="section-title linear-gradient-text">Let's Connect!</h2>
     </section>
   </main>
 </template>
