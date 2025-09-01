@@ -112,7 +112,7 @@
         <div class="social-details">
           <div class="social-item">
             <h3>Social Media</h3>
-            <div class="social-item">
+            <div class="stack-container bs item-content">
               <a href="https://www.linkedin.com/in/coleenagarcia" target="_blank">
                 <img src="./assets/images/socials-logo/linkedin.png" alt="linkedin logo">
               </a>
@@ -123,20 +123,20 @@
           </div>
           <div class="social-item">
             <h3>Location</h3>
-            <p class="item-content">
+            <p class="stack-container bs item-content ">
               <LocationIcon/>
               Pasig, Metro Manila, Philippines</p>
           </div>
           <div class="social-item">
             <h3>Response Time</h3>
-            <p class="item-content">I typically respond within 1–2 business days. Looking forward to connecting with you!</p>
+            <p class="stack-container bs item-content">I typically respond within 1–2 business days. Looking forward to connecting with you!</p>
           </div>
         </div>
   
         <div class="contact-form">
           <h3>Send a message</h3>
   
-          <form action="submit" method="post">
+          <form action="submit" method="post" class="form-details stack-container">
             <label for="user-name">Name</label>
             <input type="text" id="user-name" name="user-name" placeholder="Your Name" required></input>
   
@@ -146,7 +146,7 @@
             <label for="user-message">Message</label>
             <textarea name="user-message" id="user-message" placeholder="Your message goes here..." rows="5" required></textarea>
   
-            <button type="submit">Send Message</button>
+            <button type="submit" class="form-btn">Send Message</button>
             <p>I value your privacy. Your information will never be shared with third parties.</p>
           </form>
         </div>

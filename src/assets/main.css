@@ -440,3 +440,32 @@ header {
     background-color: var(--secondary-color);
     color: var(--text-color-inverse);
   }
+
+/* Contact Section */
+
+.item-content {
+  flex-direction: row;
+}
+
+.form-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: var(--border-radius-lg);
+  border: 3px solid var(--secondary-color);
+}
+.form-details input, .form-details textarea {
+  padding: 0.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-normal);
+  font-family: var(--font-family);
+  background-color: #a0474734;
+  color: var(--text-color-primary);
+}
+.form-details input:focus, .form-details textarea:focus {
+  outline: 2px solid var(--accent-color);
+  background-color: #a0474710;
+  color: var(--text-color-primary);
+}
