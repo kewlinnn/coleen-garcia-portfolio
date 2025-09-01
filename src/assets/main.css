@@ -35,6 +35,13 @@
 
 /*CSS reset*/
 /* Use a more-intuitive box-sizing model */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  margin: 0%;
+  padding: 0%;
+
+}
 *, *::before, *::after {
   box-sizing: border-box;
 }
