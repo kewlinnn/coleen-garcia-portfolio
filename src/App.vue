@@ -153,6 +153,10 @@
       </div>
     </section>
   </main>
+
+  <footer class="txt-center">
+    <p>&copy; {{ new Date().getFullYear() }} Coleen Garcia. All rights reserved.</p>
+  </footer>
 </template>
 
 <script setup>

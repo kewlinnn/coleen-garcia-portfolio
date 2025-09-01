@@ -500,3 +500,11 @@ header {
 .form-btn:active {
   transform: translateY(2px); /* reset lift on click */
 }
+
+footer {
+  background-color: var(--dark-black);
+  color: var(--text-color-inverse);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
