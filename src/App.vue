@@ -92,7 +92,7 @@
           <h3> {{ project.title }}</h3>
           <h4 class="project-type"> {{ project.type }}</h4>
           <div class="tech-stack">
-            <span v-for="stack in project.stack" class="stack-item"> {{ stack }}, </span>
+            <span class="stack-item">{{ project.stack.join(', ') }}</span>
           </div>
 
           <p class="project-description">{{ project.description }}</p>
