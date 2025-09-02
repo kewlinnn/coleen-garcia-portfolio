@@ -82,7 +82,7 @@ The portfolio is a single-page application with the following sections:
 
 ## 📱 Demo
 
-Visit the live portfolio: [Coming Soon - Add your deployment URL here]
+Visit the live portfolio: [Coming Soon]
 
 ## 🎨 Project Structure
 
@@ -100,7 +100,6 @@ src/
 ## 📧 Contact
 
 **Coleen Garcia**
-- Email: [Add your email]
 - LinkedIn: [Coleen Garcia](https://www.linkedin.com/in/coleenagarcia)
 - GitHub: [kewlinnn](https://github.com/kewlinnn)
 - Location: Pasig, Metro Manila, Philippines
