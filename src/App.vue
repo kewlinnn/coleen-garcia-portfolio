@@ -138,10 +138,10 @@
 
           <form action="submit" method="post" class="stack-container form-details">
             <label for="user-name">Name</label>
-            <input type="text" id="user-name" name="user-name" placeholder="Your Name" required></input>
+            <input type="text" id="user-name" name="user-name" placeholder="Your Name" required>
   
             <label for="user-email">Email</label>
-            <input type="email" id="user-email" name="user-email" placeholder="example@email.com" required></input>
+            <input type="email" id="user-email" name="user-email" placeholder="example@email.com" required>
   
             <label for="user-message">Message</label>
             <textarea name="user-message" id="user-message" placeholder="Your message goes here..." rows="5" required></textarea>
