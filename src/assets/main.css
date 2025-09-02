@@ -176,7 +176,6 @@ header {
   z-index: 1000;
 }
 .navbar {
-  width: fit-content;
   background-color: var(--secondary-color);
   color: var(--text-color-inverse);
   padding: 1rem 2rem;
@@ -200,8 +199,7 @@ header {
     border-radius: var(--border-radius-full);
   }
   .navbar-item:active {
-    color: var(--secondary-color);
-    transform: scale(0.98);
+    transform: scale(0.95);
   }
 .hero-section {
   gap: 6rem;
