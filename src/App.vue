@@ -136,7 +136,7 @@
         <div class="contact-form">
           <h3 class="social-title txt-center">Send a message</h3>
 
-          <form action="submit" method="post" class="stack-container form-details">
+          <form method="post" class="stack-container form-details">
             <label for="user-name">Name</label>
             <input type="text" id="user-name" name="user-name" placeholder="Your Name" required>
   
