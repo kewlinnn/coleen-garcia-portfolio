@@ -35,6 +35,13 @@
 
 /*CSS reset*/
 /* Use a more-intuitive box-sizing model */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  margin: 0%;
+  padding: 0%;
+
+}
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -137,6 +144,9 @@
 .italic {
   font-style: italic;
 }
+.txt-center {
+  text-align: center;
+}
 
 body {
   font-family: var(--font-family);
@@ -154,6 +164,7 @@ body {
 }
 section {
   padding-inline: 1rem;
+  padding-block: 2rem;
   width: 100%;
 }
 header {
@@ -189,6 +200,7 @@ header {
   }
 .hero-section {
   gap: 6rem;
+  padding-block: 0.678rem;
 }
 .hero-greeting {
   font-size: var(--font-size-header);
@@ -365,7 +377,8 @@ header {
 .card-container {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-bottom: 3rem;
 
 }
 .card {
@@ -432,6 +445,74 @@ header {
   color: var(--text-color-inverse);
 }
   .github-project:hover {
-  background-color: var(--secondary-color);
-  color: var(--text-color-inverse);
+    background-color: var(--secondary-color);
+    color: var(--text-color-inverse);
   }
+
+/* Contact Section */
+.social-content {
+  gap: 2rem;
+}
+.social-item {
+  margin-bottom: 1.5rem;
+}
+.social-title {
+  margin-bottom: 0.5rem;
+}
+.item-content {
+  flex-direction: row;
+}
+
+.form-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem;
+  border-radius: var(--border-radius-lg);
+  border: 3px solid var(--secondary-color);
+}
+.form-details input, .form-details textarea {
+  margin-bottom: 0.678rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-normal);
+  font-family: var(--font-family);
+  background-color: #a0474734;
+  color: var(--text-color-primary);
+}
+.form-details textarea {
+  resize: none;
+}
+.form-details input:focus, .form-details textarea:focus {
+  outline: 2px solid var(--accent-color);
+  background-color: #a0474710;
+  color: var(--text-color-primary);
+}
+
+.form-btn {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(160, 71, 71, 1) 100%);
+  background-size: 200% 100%;
+  background-position: left;
+  border: none;
+  color: var(--text-color-inverse);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-normal);
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-position 0.2s ease-in-out, transform 0.1s ease;
+}
+.form-btn:hover {
+  background-position: right;
+}
+.form-btn:active {
+  transform: translateY(2px); /* reset lift on click */
+}
+
+footer {
+  background-color: var(--dark-black);
+  color: var(--text-color-inverse);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
