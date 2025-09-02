@@ -176,6 +176,7 @@ header {
   z-index: 1000;
 }
 .navbar {
+  width: fit-content;
   background-color: var(--secondary-color);
   color: var(--text-color-inverse);
   padding: 1rem 2rem;
@@ -183,12 +184,15 @@ header {
   gap: 1rem;
   border: 5px solid rgba(255, 255, 255, 0.445);
   border-radius: var(--border-radius-full);
-  width: fit-content;
+  overflow: hidden;
+  transition: background 0.3s, color 0.3s, border-bottom 0.3s, transform 0.2s;
 }
   .navbar-item {
     font-size: var(--font-size-normal);
     font-weight: var(--font-weight-bold);
     padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--text-color-inverse);
   }
   .navbar-item:hover {
     cursor: pointer;
@@ -197,6 +201,7 @@ header {
   }
   .navbar-item:active {
     color: var(--secondary-color);
+    transform: scale(0.98);
   }
 .hero-section {
   gap: 6rem;
