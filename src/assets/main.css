@@ -500,7 +500,7 @@ header {
   font-size: var(--font-size-normal);
   padding: 1rem;
   cursor: pointer;
-  transition: background-position 0.4s ease-in-out, transform 0.4s ease;
+  transition: background-position 0.2s ease-in-out, transform 0.1s ease;
 }
 .form-btn:hover {
   background-position: right;
