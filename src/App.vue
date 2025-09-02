@@ -7,20 +7,20 @@
 
   <main>
     <section class="hero-section flex-align flex-wrap">
-      <div class="hero-text">
+      <div class="hero-text animate-slide-right" ref="heroTarget">
         <h2 class="hero-greeting">Hello I'm <br />
         <span class="hero-name linear-gradient-text typewriter">Coleen Garcia</span>
       </h2>
       <h3 class="hero-job">Web Developer</h3>
       <p class="hero-description">I’m a web developer focused on front-end development with a strong foundation in Vue.js, React Native, and UI/UX design, I love turning ideas into interactive digital experiences. Whether I’m coding layouts or refining user flows in Figma, I aim to create intuitive solutions that leave a lasting impact.</p>
       </div>
-      <img src="../src/assets/images/coleen-image.png" alt="my picture" class="hero-image" draggable="false"/>
+      <img src="../src/assets/images/coleen-image.png" alt="my picture" class="hero-image animate-slide-left" draggable="false"/>
     </section>
     <img src="../src/assets/images/wave.svg" alt="wave transition" class="wave-transition" draggable="false" />
 
     <section class="about-section bg-gradient">
-      <h2 class="section-title light">About me</h2>
-      <div class="about-content flex-align flex-wrap">
+      <h2 class="section-title light animate-fade-in" ref="aboutTarget">About me</h2>
+      <div class="about-content flex-align flex-wrap animate-slide-up">
         <div class="about-desc">
           <p class="text-light">
             My journey into web development began with a love for the arts — from drawing and design to crafting digital visuals. That passion naturally evolved into building user interfaces that are not just functional, but also visually engaging and intuitive.
@@ -48,9 +48,9 @@
     </section>
 
     <section class="skills-section">
-      <h2 class="section-title linear-gradient-text">Technical Skills</h2>
+      <h2 class="section-title linear-gradient-text animate-fade-in" ref="skillsTarget">Technical Skills</h2>
 
-      <div class="skills-content">
+      <div class="skills-content animate-stagger">
         <div class="stack-container bs" v-for="stack in skills">
           <h3 class="stack-title">{{ stack.name }}</h3>
           <div class="tech-wrapper flex-wrap">
@@ -64,9 +64,9 @@
     </section>
 
     <section class="internship-section">
-      <h2 class="section-title linear-gradient-text">Internship Experience</h2>
+      <h2 class="section-title linear-gradient-text animate-fade-in" ref="internshipTarget">Internship Experience</h2>
       
-      <div class="timeline">
+      <div class="timeline animate-stagger">
         <div v-for="internship in internships" :key="internship.title"
         class="timeline-item"
         :class="internship.timelinePosition"
@@ -85,8 +85,8 @@
     </section>
 
     <section class="projects-section bg-gradient">
-      <h2 class="section-title fc-inverse">Projects</h2>
-      <div class="card-container">
+      <h2 class="section-title fc-inverse animate-fade-in" ref="projectsTarget">Projects</h2>
+      <div class="card-container animate-stagger">
         <div v-for="project in projects" class="card bs">
           <img :src="project.image" :alt="`${project.title} thumbnail`" class="project-image" draggable="false"/>
           <h3> {{ project.title }}</h3>
@@ -106,9 +106,9 @@
     </section>
 
     <section class="socials-section">
-      <h2 class="section-title linear-gradient-text">Let's Connect!</h2>
+      <h2 class="section-title linear-gradient-text animate-fade-in" ref="contactTarget">Let's Connect!</h2>
 
-      <div class="social-content flex-align">
+      <div class="social-content flex-align animate-slide-up">
         <div class="social-details">
           <div class="social-item">
             <h3 class="social-title">Social Media</h3>
@@ -163,6 +163,7 @@
 import CalendarIcon from './components/icons/CalendarIcon.vue';
 import { ref } from 'vue';
 import LocationIcon from './components/icons/LocationIcon.vue';
+import { useIntersectionObserver } from './composables/useIntersectionObserver.js';
 
 const navbarItems = ref([
   { name: 'Home', link: '/' },
@@ -286,6 +287,32 @@ const projects = [
     github:'https://github.com/kewlinnn/blog-it',
   }
 ]
+
+// Intersection Observer setup for different sections
+const { target: heroTarget } = useIntersectionObserver('animate-in', { 
+  rootMargin: '0px 0px -50px 0px',
+  threshold: 0.2 
+})
+const { target: aboutTarget } = useIntersectionObserver('animate-in', { 
+  rootMargin: '0px 0px -50px 0px',
+  threshold: 0.2 
+})
+const { target: skillsTarget } = useIntersectionObserver('animate-in', { 
+  rootMargin: '0px 0px -50px 0px',
+  threshold: 0.2 
+})
+const { target: internshipTarget } = useIntersectionObserver('animate-in', { 
+  rootMargin: '0px 0px -50px 0px',
+  threshold: 0.2 
+})
+const { target: projectsTarget } = useIntersectionObserver('animate-in', { 
+  rootMargin: '0px 0px -50px 0px',
+  threshold: 0.2 
+})
+const { target: contactTarget } = useIntersectionObserver('animate-in', { 
+  rootMargin: '0px 0px -50px 0px',
+  threshold: 0.2 
+})
 </script>
 
 <style scoped>

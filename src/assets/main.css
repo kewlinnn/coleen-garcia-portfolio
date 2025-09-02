@@ -516,3 +516,187 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+
+/* ========== INTERSECTION OBSERVER ANIMATIONS ========== */
+
+/* Base animation styles - elements start hidden and animate in */
+.animate-fade-in,
+.animate-slide-up,
+.animate-slide-down,
+.animate-slide-left,
+.animate-slide-right,
+.animate-zoom-in,
+.animate-zoom-out {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: transform, opacity;
+}
+
+/* Fade in animation */
+.animate-fade-in.animate-in {
+  opacity: 1;
+}
+
+/* Slide up animation */
+.animate-slide-up {
+  transform: translateY(50px);
+}
+.animate-slide-up.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide down animation */
+.animate-slide-down {
+  transform: translateY(-50px);
+}
+.animate-slide-down.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide left animation */
+.animate-slide-left {
+  transform: translateX(50px);
+}
+.animate-slide-left.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide right animation */
+.animate-slide-right {
+  transform: translateX(-50px);
+}
+.animate-slide-right.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Zoom in animation */
+.animate-zoom-in {
+  transform: scale(0.8);
+}
+.animate-zoom-in.animate-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Zoom out animation */
+.animate-zoom-out {
+  transform: scale(1.2);
+}
+.animate-zoom-out.animate-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Staggered animations for lists/grids */
+.animate-stagger > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.animate-stagger.animate-in > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add delays for staggered effect */
+.animate-stagger.animate-in > *:nth-child(1) { transition-delay: 0.1s; }
+.animate-stagger.animate-in > *:nth-child(2) { transition-delay: 0.2s; }
+.animate-stagger.animate-in > *:nth-child(3) { transition-delay: 0.3s; }
+.animate-stagger.animate-in > *:nth-child(4) { transition-delay: 0.4s; }
+.animate-stagger.animate-in > *:nth-child(5) { transition-delay: 0.5s; }
+.animate-stagger.animate-in > *:nth-child(6) { transition-delay: 0.6s; }
+.animate-stagger.animate-in > *:nth-child(7) { transition-delay: 0.7s; }
+.animate-stagger.animate-in > *:nth-child(8) { transition-delay: 0.8s; }
+.animate-stagger.animate-in > *:nth-child(9) { transition-delay: 0.9s; }
+.animate-stagger.animate-in > *:nth-child(10) { transition-delay: 1.0s; }
+
+/* ========== ENHANCED HOVER STATES ========== */
+
+/* Enhanced navigation hover effects */
+.navbar-item {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-item::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-item:hover::before {
+  width: 80%;
+}
+
+/* Enhanced skill icon hover effects */
+.tech-image {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  filter: grayscale(0.2);
+}
+
+.stack:hover .tech-image {
+  transform: scale(1.1);
+  filter: grayscale(0) brightness(1.1);
+}
+
+/* Enhanced social media links */
+.social-content a {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.social-content a:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+.social-content a img {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.social-content a:hover img {
+  filter: brightness(1.2) saturate(1.2);
+}
+
+/* Enhanced timeline items */
+.timeline-item {
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-slide-up,
+  .animate-slide-down,
+  .animate-slide-left,
+  .animate-slide-right,
+  .animate-zoom-in,
+  .animate-zoom-out,
+  .animate-stagger > * {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+  
+  .navbar-item,
+  .tech-image,
+  .social-content a,
+  .timeline-item {
+    transition: none;
+  }
+}
