@@ -57,7 +57,7 @@
           <h3 class="stack-title">{{ stack.name }}</h3>
           <div class="tech-wrapper flex-wrap">
             <div class="stack flex-gap-2" v-for="tech in stack.tech">
-              <img class="tech-image" :src="tech.icon" :alt="`${tech.name} icon`" draggable="false">
+              <img class="tech-image" :src="`./src/assets/images/${tech.icon}`" :alt="`${tech.name} icon`" draggable="false">
               <span>{{ tech.name }}</span>
             </div>
           </div>
@@ -204,10 +204,8 @@ const colors = {
   darkBlack: "#1a1a1a",
   brightWhite: "#ffffff"
 }
-
 const getIcon = (iconName) => {
-  const ICON_BASE_SRC = '@/assets/images/';
-  return `${ICON_BASE_SRC}${iconName}.png`;
+  return `images/${iconName}.png`;
 }
 
 const skills = {
@@ -215,35 +213,73 @@ const skills = {
     name: "Front-end",
     tech:
     [
-    { name: 'Vue.js', icon: getIcon('vue-icon') },
-    { name: 'JavaScript', icon: getIcon('js-icon') },
-    { name: 'TypeScript', icon: getIcon('ts-icon') },
-    { name: 'Bootstrap', icon: getIcon('bootstrap-icon') },
-    { name: 'React', icon: getIcon('react-icon')},
-    { name: 'React Native', icon: getIcon('react-native-icon') },
-    { name: 'HTML5', icon: getIcon('html-icon') },
-    { name: 'CSS3', icon: getIcon('css-icon') },
-    { name: 'JQuery', icon: getIcon('jquery-icon') },
-    { name: 'SCSS', icon: getIcon('scss-icon') },
+    { name: 'Vue.js', icon: 'vue-icon.png' },
+    { name: 'JavaScript', icon: 'js-icon.png' },
+    { name: 'TypeScript', icon: 'ts-icon.png' },
+    { name: 'Bootstrap', icon: 'bootstrap-icon.png' },
+    { name: 'React', icon: 'react-icon.png' },
+    { name: 'React Native', icon: 'react-native-icon.png' },
+    { name: 'HTML5', icon: 'html-icon.png' },
+    { name: 'CSS3', icon: 'css-icon.png' },
+    { name: 'JQuery', icon: 'jquery-icon.png' },
+    { name: 'SCSS', icon: 'scss-icon.png' },
   ]},
   backend: {
     name: "Back-end",
     tech:
   [
-    { name: 'Node.js', icon: getIcon('node-icon') },
-    { name: 'Express.js', icon: getIcon('express-icon') },
-    { name: 'Rest API', icon: getIcon('restapi-icon') },
-    { name: 'PostgreSQL', icon: getIcon('postgresql-icon') },
+    { name: 'Node.js', icon: 'node-icon.png' },
+    { name: 'Express.js', icon: 'express-icon.png' },
+    { name: 'Rest API', icon: 'restapi-icon.png' },
+    { name: 'PostgreSQL', icon: 'postgresql-icon.png'  },
   ]
   },
   tools: {
     name: "Tools & Platforms",
     tech: [
-    { name: 'Git', icon: getIcon('git-icon') },
-    { name: 'GitHub', icon: getIcon('github-icon') },
-    { name: 'Postman', icon: getIcon('postman-icon') },
+    { name: 'Git', icon: 'git-icon.png' },
+    { name: 'GitHub', icon: 'github-icon.png' },
+    { name: 'Postman', icon: 'postman-icon.png' },
   ]}
 }
+// const getIcon = (iconName) => {
+//   return `images/${iconName}.png`;
+// }
+
+// const skills = {
+//   frontend:{
+//     name: "Front-end",
+//     tech:
+//     [
+//     { name: 'Vue.js', icon: getIcon('vue-icon') },
+//     { name: 'JavaScript', icon: getIcon('js-icon') },
+//     { name: 'TypeScript', icon: getIcon('ts-icon') },
+//     { name: 'Bootstrap', icon: getIcon('bootstrap-icon') },
+//     { name: 'React', icon: getIcon('react-icon')},
+//     { name: 'React Native', icon: getIcon('react-native-icon') },
+//     { name: 'HTML5', icon: getIcon('html-icon') },
+//     { name: 'CSS3', icon: getIcon('css-icon') },
+//     { name: 'JQuery', icon: getIcon('jquery-icon') },
+//     { name: 'SCSS', icon: getIcon('scss-icon') },
+//   ]},
+//   backend: {
+//     name: "Back-end",
+//     tech:
+//   [
+//     { name: 'Node.js', icon: getIcon('node-icon') },
+//     { name: 'Express.js', icon: getIcon('express-icon') },
+//     { name: 'Rest API', icon: getIcon('restapi-icon') },
+//     { name: 'PostgreSQL', icon: getIcon('postgresql-icon') },
+//   ]
+//   },
+//   tools: {
+//     name: "Tools & Platforms",
+//     tech: [
+//     { name: 'Git', icon: getIcon('git-icon') },
+//     { name: 'GitHub', icon: getIcon('github-icon') },
+//     { name: 'Postman', icon: getIcon('postman-icon') },
+//   ]}
+// }
 
 const internships = [
   {
