@@ -152,7 +152,7 @@ html {
 .left-target {
   opacity: 0;
   transform: translateX(-50px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .left-target.show {
   opacity: 1;
@@ -161,7 +161,7 @@ html {
 .right-target {
   opacity: 0;
   transform: translateX(50px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .right-target.show {
   opacity: 1;
@@ -170,7 +170,7 @@ html {
 .top-target {
   opacity: 0;
   transform: translateY(-50px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .top-target.show {
   opacity: 1;
@@ -179,7 +179,7 @@ html {
 .bottom-target {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .bottom-target.show {
   opacity: 1;

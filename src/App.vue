@@ -9,7 +9,7 @@
 
   <main>
     <section id="home" class="hero-section flex-align flex-wrap">
-      <div v-intersect class="hero-text left-target" ref="targetElement">
+      <div v-intersect class="hero-text left-target">
         <h2 class="hero-greeting">Hello I'm <br />
         <span class="hero-name linear-gradient-text typewriter">Coleen Garcia</span>
       </h2>
@@ -21,7 +21,7 @@
     <img src="../src/assets/images/wave.svg" alt="wave transition" class="wave-transition" draggable="false" />
 
     <section id="about" class="about-section bg-gradient">
-      <h2 v-intersect class="section-title light top-target">About me</h2>
+      <h2 v-intersect class="section-title light bottom-target">About me</h2>
       <div class="about-content flex-align flex-wrap">
         <div v-intersect class="about-desc left-target">
           <p class="text-light">
@@ -50,7 +50,7 @@
     </section>
 
     <section id="skills" class="skills-section">
-      <h2 v-intersect class="section-title linear-gradient-text top-target">Technical Skills</h2>
+      <h2 v-intersect class="section-title linear-gradient-text bottom-target">Technical Skills</h2>
 
       <div class="skills-content">
         <div v-intersect class="stack-container bs bottom-target" v-for="stack in skills">
@@ -66,7 +66,7 @@
     </section>
 
     <section id="internship" class="internship-section">
-      <h2 v-intersect class="section-title linear-gradient-text top-target">Internship Experience</h2>
+      <h2 v-intersect class="section-title linear-gradient-text bottom-target">Internship Experience</h2>
       
       <div class="timeline">
         <div v-for="internship in internships" :key="internship.title"
@@ -87,9 +87,9 @@
     </section>
 
     <section id="projects" class="projects-section bg-gradient">
-      <h2 v-intersect class="section-title fc-inverse top-target">Projects</h2>
+      <h2 v-intersect class="section-title fc-inverse bottom-target">Projects</h2>
       <div class="card-container">
-        <div v-intersect v-for="project in projects" class="card bs right-target">
+        <div v-intersect v-for="project in projects" class="card bs bottom-target">
           <img :src="project.image" :alt="`${project.title} thumbnail`" class="project-image" draggable="false"/>
           <h3> {{ project.title }}</h3>
           <h4 class="project-type"> {{ project.type }}</h4>
@@ -297,6 +297,7 @@ const vIntersect = {
       ([entry]) => {
         if (entry.isIntersecting) {
           el.classList.add('show')
+          observer.unobserve(entry.target); // stop observing after first trigger
           console.log('Element is fully visible in screen');
         } else {
           el.classList.remove('show')
