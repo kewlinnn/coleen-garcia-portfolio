@@ -151,7 +151,7 @@
             <button type="submit" class="form-btn" :disabled="loading">{{ loading ? "Sending…" : "Send Message" }}</button>
 
 
-            <p v-if="status" class="txt-center txt-small" :class="status.type">
+            <p v-if="status" class="txt-center txt-small status" :class="status.type">
               {{ status.message }}
             </p>
 

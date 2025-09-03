@@ -570,6 +570,12 @@ header {
 .form-btn:active {
   transform: translateY(2px); /* reset lift on click */
 }
+.status.success {
+  color: rgb(62, 153, 62);
+}
+.status.error {
+  color: rgb(207, 63, 63);
+}
 
 footer {
   background-color: var(--dark-black);
