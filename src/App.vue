@@ -16,9 +16,9 @@
       <h3 class="hero-job">Web Developer</h3>
       <p class="hero-description">I’m a web developer focused on front-end development with a strong foundation in Vue.js, React Native, and UI/UX design, I love turning ideas into interactive digital experiences. Whether I’m coding layouts or refining user flows in Figma, I aim to create intuitive solutions that leave a lasting impact.</p>
       </div>
-      <img v-intersect src="../src/assets/images/coleen-image.png" alt="my picture" class="hero-image right-target" draggable="false"/>
+      <img v-intersect src="@/assets/images/coleen-image.png" alt="my picture" class="hero-image right-target" draggable="false"/>
     </section>
-    <img src="../src/assets/images/wave.svg" alt="wave transition" class="wave-transition" draggable="false" />
+    <img src="@/assets/images/wave.svg" alt="wave transition" class="wave-transition" draggable="false" />
 
     <section id="about" class="about-section bg-gradient">
       <h2 v-intersect class="section-title light bottom-target">About me</h2>
@@ -119,7 +119,7 @@
                 <img src="@/assets/images/socials-logo/linkedin.png" alt="linkedin logo">
               </a>
               <a href="https://github.com/kewlinnn" target="_blank" class="social-link">
-                <img src="../src/assets/images/socials-logo/github.png" alt="github logo">
+                <img src="@/assets/images/socials-logo/github.png" alt="github logo">
               </a>
             </div>
           </div>
