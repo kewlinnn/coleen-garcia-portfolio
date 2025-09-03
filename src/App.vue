@@ -110,8 +110,8 @@
     <section id="contact" class="socials-section">
       <h2 v-intersect class="section-title linear-gradient-text top-target">Let's Connect!</h2>
 
-      <div v-intersect class="social-content flex-align left-target">
-        <div class="social-details">
+      <div class="social-content flex-align">
+        <div  v-intersect class="social-details left-target">
           <div class="social-item">
             <h3 class="social-title">Social Media</h3>
             <div class="stack-container bs item-content">
