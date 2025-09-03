@@ -252,7 +252,7 @@ header {
   font-weight: var(--font-weight-black);
   text-transform: uppercase;
   line-height: 5rem;
-  border-right: 4px solid var(--accent-color); /* cursor */
+  border-right: 4px solid var(--accent-color);
   animation: typing 3s steps(20, end), blink 0.75s step-end infinite;
 }
 @keyframes typing {
