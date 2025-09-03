@@ -138,17 +138,29 @@
         <div v-intersect class="contact-form right-target">
           <h3 class="social-title txt-center">Send a message</h3>
 
-          <form method="post" class="stack-container form-details">
+          <form @submit.prevent="submit" class="stack-container form-details">
+            <!-- Honeypot field (hidden) -->
+            <label class="hp" aria-hidden="true">
+              Leave this field empty
+              <input type="text" v-model="honeypot" autocomplete="off" tabindex="-1" />
+            </label>
+
             <label for="user-name">Name</label>
-            <input type="text" id="user-name" name="user-name" placeholder="Your Name" required>
+            <input type="text" id="user-name" name="user-name" placeholder="Your Name" v-model="form.name" required>
   
             <label for="user-email">Email</label>
-            <input type="email" id="user-email" name="user-email" placeholder="example@email.com" required>
-  
+            <input type="email" id="user-email" name="user-email" placeholder="example@email.com" v-model="form.email" required>
+
             <label for="user-message">Message</label>
-            <textarea name="user-message" id="user-message" placeholder="Your message goes here..." rows="5" required></textarea>
-  
-            <button type="submit" class="form-btn">Send Message</button>
+            <textarea name="user-message" id="user-message" placeholder="Your message goes here..." rows="5" v-model="form.message" required></textarea>
+
+            <button type="submit" class="form-btn" :disabled="loading">{{ loading ? "Sending…" : "Send Message" }}</button>
+
+
+            <p v-if="status" class="txt-center txt-small status" :class="status.type">
+              {{ status.message }}
+            </p>
+
             <p class="txt-center txt-small">I value your privacy. Your information will never be shared with third parties.</p>
           </form>
         </div>
@@ -163,10 +175,15 @@
 
 <script setup>
 import CalendarIcon from './components/icons/CalendarIcon.vue';
-import { ref, computed } from 'vue';
+import { ref, computed, reactive } from 'vue';
 import LocationIcon from './components/icons/LocationIcon.vue';
 
 const currentYear = computed(() => new Date().getFullYear());
+
+});
+const honeypot = ref('');
+const loading = ref(false);
+const status = ref(null);
 
 const navbarItems = ref([
   { name: 'Home', link: '#home' },
@@ -314,6 +331,35 @@ const vIntersect = {
       delete el._observer
     }
   },
+}
+
+async function submit() {
+
+  if(honeypot.value) {
+    //bot detected - return immediately
+    return;
+  }
+
+  status.value = null;
+  loading.value = true;
+
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form)
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Failed to send");
+
+    status.value = { type: "success", message: "Message sent successfully!" };
+    form.name = form.email = form.message = "";
+  } catch (err) {
+    status.value = { type: "error", message: err.message };
+  } finally {
+    loading.value = false;
+  }
 }
 </script>
 

@@ -571,6 +571,18 @@ header {
   transform: translateY(2px); /* reset lift on click */
 }
 
+/* honeypot field */
+.hp {
+  display: none;
+}
+
+.status.success {
+  color: rgb(62, 153, 62);
+}
+.status.error {
+  color: rgb(207, 63, 63);
+}
+
 footer {
   background-color: var(--dark-black);
   color: var(--text-color-inverse);
