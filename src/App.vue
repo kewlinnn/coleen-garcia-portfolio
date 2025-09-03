@@ -330,6 +330,29 @@ const vIntersect = {
     }
   },
 }
+
+async function submit() {
+  status.value = null;
+  loading.value = true;
+
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form)
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Failed to send");
+
+    status.value = { type: "success", message: "Message sent successfully!" };
+    form.name = form.email = form.message = "";
+  } catch (err) {
+    status.value = { type: "error", message: err.message };
+  } finally {
+    loading.value = false;
+  }
+}
 </script>
 
 <style scoped>
