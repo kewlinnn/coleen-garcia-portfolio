@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav class="navbar bs">
+    <nav v-intersect class="navbar bs">
       <a :href="item.link" v-for="item in navbarItems" :key="item.name" class="navbar-item">
         <span>{{ item.name }}</span>
       </a>
@@ -9,21 +9,21 @@
 
   <main>
     <section id="home" class="hero-section flex-align flex-wrap">
-      <div class="hero-text">
+      <div v-intersect class="hero-text left-target">
         <h2 class="hero-greeting">Hello I'm <br />
         <span class="hero-name linear-gradient-text typewriter">Coleen Garcia</span>
       </h2>
       <h3 class="hero-job">Web Developer</h3>
       <p class="hero-description">I’m a web developer focused on front-end development with a strong foundation in Vue.js, React Native, and UI/UX design, I love turning ideas into interactive digital experiences. Whether I’m coding layouts or refining user flows in Figma, I aim to create intuitive solutions that leave a lasting impact.</p>
       </div>
-      <img src="../src/assets/images/coleen-image.png" alt="my picture" class="hero-image" draggable="false"/>
+      <img v-intersect src="../src/assets/images/coleen-image.png" alt="my picture" class="hero-image right-target" draggable="false"/>
     </section>
     <img src="../src/assets/images/wave.svg" alt="wave transition" class="wave-transition" draggable="false" />
 
     <section id="about" class="about-section bg-gradient">
-      <h2 class="section-title light">About me</h2>
+      <h2 v-intersect class="section-title light bottom-target">About me</h2>
       <div class="about-content flex-align flex-wrap">
-        <div class="about-desc">
+        <div v-intersect class="about-desc left-target">
           <p class="text-light">
             My journey into web development began with a love for the arts — from drawing and design to crafting digital visuals. That passion naturally evolved into building user interfaces that are not just functional, but also visually engaging and intuitive.
           </p>
@@ -31,7 +31,7 @@
             I specialize in creating responsive websites and mobile apps using Vue.js, React Native, and design tools like Figma and Canva. I thrive on transforming ideas into seamless digital experiences. Whether it’s designing wireframes or implementing interactive features, I aim to make every project both beautiful and usable.
           </p>
         </div>
-        <div class="about-education bs">
+        <div v-intersect class="about-education bs right-target">
           <p class="txt-lg bold">Bachelor of Science in Computer Science</p>
           <p class="txt-md bold">Technological University of the Philippines</p>
           <p class="txt-sm italic">Cum Laude</p>
@@ -50,10 +50,10 @@
     </section>
 
     <section id="skills" class="skills-section">
-      <h2 class="section-title linear-gradient-text">Technical Skills</h2>
+      <h2 v-intersect class="section-title linear-gradient-text bottom-target">Technical Skills</h2>
 
       <div class="skills-content">
-        <div class="stack-container bs" v-for="stack in skills">
+        <div v-intersect class="stack-container bs bottom-target" v-for="stack in Object.values(skills)">
           <h3 class="stack-title">{{ stack.name }}</h3>
           <div class="tech-wrapper flex-wrap">
             <div class="stack flex-gap-2" v-for="tech in stack.tech">
@@ -66,14 +66,14 @@
     </section>
 
     <section id="internship" class="internship-section">
-      <h2 class="section-title linear-gradient-text">Internship Experience</h2>
+      <h2 v-intersect class="section-title linear-gradient-text bottom-target">Internship Experience</h2>
       
       <div class="timeline">
         <div v-for="internship in internships" :key="internship.title"
         class="timeline-item"
         :class="internship.timelinePosition"
         >
-          <div class="timeline-content bs">
+          <div v-intersect class="timeline-content bs bottom-target">
               <h3 class="linear-gradient-text">{{ internship.title }}</h3>
               <h4 class="fs-1 fc-secondary">{{ internship.company }}</h4>
               <h5 class="fs-1 fw-1">{{ internship.duration }}</h5>
@@ -87,9 +87,9 @@
     </section>
 
     <section id="projects" class="projects-section bg-gradient">
-      <h2 class="section-title fc-inverse">Projects</h2>
+      <h2 v-intersect class="section-title fc-inverse bottom-target">Projects</h2>
       <div class="card-container">
-        <div v-for="project in projects" class="card bs">
+        <div v-intersect v-for="project in projects" :key="project.title" class="card bs bottom-target">
           <img :src="project.image" :alt="`${project.title} thumbnail`" class="project-image" draggable="false"/>
           <h3> {{ project.title }}</h3>
           <h4 class="project-type"> {{ project.type }}</h4>
@@ -108,18 +108,18 @@
     </section>
 
     <section id="contact" class="socials-section">
-      <h2 class="section-title linear-gradient-text">Let's Connect!</h2>
+      <h2 v-intersect class="section-title linear-gradient-text top-target">Let's Connect!</h2>
 
       <div class="social-content flex-align">
-        <div class="social-details">
+        <div  v-intersect class="social-details left-target">
           <div class="social-item">
             <h3 class="social-title">Social Media</h3>
             <div class="stack-container bs item-content">
-              <a href="https://www.linkedin.com/in/coleenagarcia" target="_blank">
-                <img src="./assets/images/socials-logo/linkedin.png" alt="linkedin logo">
+              <a href="https://www.linkedin.com/in/coleenagarcia" target="_blank" class="social-link">
+                <img src="@/assets/images/socials-logo/linkedin.png" alt="linkedin logo">
               </a>
-              <a href="https://github.com/kewlinnn" target="_blank">
-                <img src="./assets/images/socials-logo/github.png" alt="github logo">
+              <a href="https://github.com/kewlinnn" target="_blank" class="social-link">
+                <img src="../src/assets/images/socials-logo/github.png" alt="github logo">
               </a>
             </div>
           </div>
@@ -135,7 +135,7 @@
           </div>
         </div>
   
-        <div class="contact-form">
+        <div v-intersect class="contact-form right-target">
           <h3 class="social-title txt-center">Send a message</h3>
 
           <form method="post" class="stack-container form-details">
@@ -157,14 +157,16 @@
   </main>
 
   <footer class="txt-center">
-    <p>&copy; {{ new Date().getFullYear() }} Coleen Garcia. All rights reserved.</p>
+    <p>&copy; {{ currentYear }} Coleen Garcia. All rights reserved.</p>
   </footer>
 </template>
 
 <script setup>
 import CalendarIcon from './components/icons/CalendarIcon.vue';
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import LocationIcon from './components/icons/LocationIcon.vue';
+
+const currentYear = computed(() => new Date().getFullYear());
 
 const navbarItems = ref([
   { name: 'Home', link: '#home' },
@@ -183,9 +185,8 @@ const colors = {
   brightWhite: "#ffffff"
 }
 
-const ICON_BASE_SRC = '../src/assets/images/';
-
 const getIcon = (iconName) => {
+  const ICON_BASE_SRC = '../src/assets/images/';
   return `${ICON_BASE_SRC}${iconName}.png`;
 }
 
@@ -288,6 +289,34 @@ const projects = [
     github:'https://github.com/kewlinnn/blog-it',
   }
 ]
+
+// IntersectionObserver directive
+// This custom Vue directive adds a 'show' class to elements when they enter the viewport,
+// enabling scroll-based animations or transitions. It stops observing after the first intersection
+// for performance, and cleans up the observer when the element is unmounted.
+const vIntersect = {
+  mounted(el) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add('show')
+          observer.unobserve(entry.target); // stop observing after first trigger
+        } else {
+          el.classList.remove('show')
+        }
+      },
+      { threshold: 0.5 } // adjust sensitivity
+    )
+    observer.observe(el)
+    el._observer = observer // store for cleanup
+  },
+  unmounted(el) {
+    if (el._observer) {
+      el._observer.disconnect()
+      delete el._observer
+    }
+  },
+}
 </script>
 
 <style scoped>

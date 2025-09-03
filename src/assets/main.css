@@ -148,6 +148,44 @@ html {
   text-align: center;
 }
 
+/* Intersect animation utilities */
+.left-target {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.left-target.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+.right-target {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.right-target.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+.top-target {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.top-target.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.bottom-target {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.bottom-target.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 body {
   font-family: var(--font-family);
   font-size: var(--font-size);
@@ -214,7 +252,16 @@ header {
   font-weight: var(--font-weight-black);
   text-transform: uppercase;
   line-height: 5rem;
-
+  border-right: 4px solid var(--accent-color); /* cursor */
+  animation: typing 3s steps(20, end), blink 0.75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: var(--accent-color); }
 }
 .hero-job {
   font-size: var(--font-size-header);
@@ -226,7 +273,13 @@ header {
 }
 .hero-image {
   max-height: 500px;
+  animation: floatImage 2s ease-in-out infinite;
 }
+@keyframes floatImage {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
 .wave-transition {
   transform: rotateY(180deg);
   width: 100%;
@@ -461,6 +514,12 @@ header {
 }
 .social-title {
   margin-bottom: 0.5rem;
+}
+.social-link:hover {
+  transform: scale(1.0256);
+  cursor: pointer;
+  filter: brightness(2);
+  transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
 }
 .item-content {
   flex-direction: row;
