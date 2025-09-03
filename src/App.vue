@@ -9,7 +9,7 @@
 
   <main>
     <section id="home" class="hero-section flex-align flex-wrap">
-      <div class="hero-text" ref="targetElement">
+      <div class="hero-text target" ref="targetElement">
         <h2 class="hero-greeting">Hello I'm <br />
         <span class="hero-name linear-gradient-text typewriter">Coleen Garcia</span>
       </h2>
@@ -157,32 +157,34 @@
   </main>
 
   <footer class="txt-center">
-    <p>&copy; {{ new Date().getFullYear() }} Coleen Garcia. All rights reserved.</p>
+    <p>&copy; {{ currentYear }} Coleen Garcia. All rights reserved.</p>
   </footer>
 </template>
 
 <script setup>
 import CalendarIcon from './components/icons/CalendarIcon.vue';
-import { ref, useTemplateRef } from 'vue';
+import { ref, computed, useTemplateRef, onMounted } from 'vue';
 import LocationIcon from './components/icons/LocationIcon.vue';
 import { useIntersectionObserver } from '@vueuse/core';
 
-const targetElement = ref(null);
+const currentYear = computed(() => new Date().getFullYear());
 
-const { isIntersecting, stop } = useIntersectionObserver(
-  targetElement,
-    ([{ isIntersecting }]) => {
-      // Do something when intersection state changes
-      if (isIntersecting) {
-        console.log('Element is in view!');
-        targetElement.value.classList.add('show');
-      } else {
-        console.log('Element is out of view!');
-        targetElement.value.classList.remove('show');
-      }
-    },
-    { threshold: 1 } // Optional configuration: trigger when 100% visible
-    );
+const target =  useTemplateRef('targetElement');
+onMounted(() => {
+  if (target.value) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          target.value.classList.add('highlight');
+        } else {
+          target.value.classList.remove('highlight');
+        }
+      });
+    }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+
+    observer.observe(target.value);
+  }
+});
 
 const navbarItems = ref([
   { name: 'Home', link: '#home' },
