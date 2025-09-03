@@ -1,12 +1,14 @@
 <template>
   <header>
     <nav class="navbar bs">
-        <span class="navbar-item" v-for="item in navbarItems" key="item.name">{{ item.name }}</span>
+      <a :href="item.link" v-for="item in navbarItems" :key="item.name" class="navbar-item">
+        <span>{{ item.name }}</span>
+      </a>
     </nav>
   </header>
 
   <main>
-    <section class="hero-section flex-align flex-wrap">
+    <section id="home" class="hero-section flex-align flex-wrap">
       <div class="hero-text">
         <h2 class="hero-greeting">Hello I'm <br />
         <span class="hero-name linear-gradient-text typewriter">Coleen Garcia</span>
@@ -18,7 +20,7 @@
     </section>
     <img src="../src/assets/images/wave.svg" alt="wave transition" class="wave-transition" draggable="false" />
 
-    <section class="about-section bg-gradient">
+    <section id="about" class="about-section bg-gradient">
       <h2 class="section-title light">About me</h2>
       <div class="about-content flex-align flex-wrap">
         <div class="about-desc">
@@ -47,7 +49,7 @@
       </div>
     </section>
 
-    <section class="skills-section">
+    <section id="skills" class="skills-section">
       <h2 class="section-title linear-gradient-text">Technical Skills</h2>
 
       <div class="skills-content">
@@ -63,7 +65,7 @@
       </div>
     </section>
 
-    <section class="internship-section">
+    <section id="internship" class="internship-section">
       <h2 class="section-title linear-gradient-text">Internship Experience</h2>
       
       <div class="timeline">
@@ -84,7 +86,7 @@
       </div>
     </section>
 
-    <section class="projects-section bg-gradient">
+    <section id="projects" class="projects-section bg-gradient">
       <h2 class="section-title fc-inverse">Projects</h2>
       <div class="card-container">
         <div v-for="project in projects" class="card bs">
@@ -105,7 +107,7 @@
       </div>
     </section>
 
-    <section class="socials-section">
+    <section id="contact" class="socials-section">
       <h2 class="section-title linear-gradient-text">Let's Connect!</h2>
 
       <div class="social-content flex-align">
@@ -165,10 +167,10 @@ import { ref } from 'vue';
 import LocationIcon from './components/icons/LocationIcon.vue';
 
 const navbarItems = ref([
-  { name: 'Home', link: '/' },
-  { name: 'About', link: '/about' },
-  { name: 'Projects', link: '/projects' },
-  { name: 'Contact', link: '/contact' }
+  { name: 'Home', link: '#home' },
+  { name: 'About', link: '#about' },
+  { name: 'Projects', link: '#projects' },
+  { name: 'Contact', link: '#contact' }
 ])
 
 const colors = {
