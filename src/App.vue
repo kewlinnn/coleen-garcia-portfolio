@@ -9,7 +9,7 @@
 
   <main>
     <section id="home" class="hero-section flex-align flex-wrap">
-      <div class="hero-text">
+      <div class="hero-text" ref="targetElement">
         <h2 class="hero-greeting">Hello I'm <br />
         <span class="hero-name linear-gradient-text typewriter">Coleen Garcia</span>
       </h2>
@@ -163,8 +163,26 @@
 
 <script setup>
 import CalendarIcon from './components/icons/CalendarIcon.vue';
-import { ref } from 'vue';
+import { ref, useTemplateRef } from 'vue';
 import LocationIcon from './components/icons/LocationIcon.vue';
+import { useIntersectionObserver } from '@vueuse/core';
+
+const targetElement = ref(null);
+
+const { isIntersecting, stop } = useIntersectionObserver(
+  targetElement,
+    ([{ isIntersecting }]) => {
+      // Do something when intersection state changes
+      if (isIntersecting) {
+        console.log('Element is in view!');
+        targetElement.value.classList.add('show');
+      } else {
+        console.log('Element is out of view!');
+        targetElement.value.classList.remove('show');
+      }
+    },
+    { threshold: 1 } // Optional configuration: trigger when 100% visible
+    );
 
 const navbarItems = ref([
   { name: 'Home', link: '#home' },

@@ -205,6 +205,16 @@ header {
   gap: 6rem;
   padding-block: 0.678rem;
 }
+.hero-text {
+  opacity: 0;
+  transform: translateX(-100px); /* Start the element from below its final position */
+  transition: opacity 1s ease, transform 0.8s ease; /* Apply transitions to both properties */
+}
+.hero-text.show {
+  opacity: 1;
+  transform: translateX(0); /* Move the element to its original, final position */
+}
+
 .hero-greeting {
   font-size: var(--font-size-header);
   font-weight: var(--font-weight-normal);
