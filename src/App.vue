@@ -343,7 +343,7 @@ async function submit() {
     //bot detected - return immediately
     return;
   }
-  
+
   status.value = null;
   loading.value = true;
 
