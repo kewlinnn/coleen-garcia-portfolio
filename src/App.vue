@@ -163,7 +163,7 @@
 
 <script setup>
 import CalendarIcon from './components/icons/CalendarIcon.vue';
-import { ref, computed, onMounted, useTemplateRef } from 'vue';
+import { ref, computed } from 'vue';
 import LocationIcon from './components/icons/LocationIcon.vue';
 
 const currentYear = computed(() => new Date().getFullYear());
@@ -298,7 +298,6 @@ const vIntersect = {
         if (entry.isIntersecting) {
           el.classList.add('show')
           observer.unobserve(entry.target); // stop observing after first trigger
-          console.log('Element is fully visible in screen');
         } else {
           el.classList.remove('show')
         }
