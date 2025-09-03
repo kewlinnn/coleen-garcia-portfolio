@@ -302,7 +302,7 @@ const vIntersect = {
           el.classList.remove('show')
         }
       },
-      { threshold: 0.1 } // adjust sensitivity
+      { threshold: 0.5 } // adjust sensitivity
     )
     observer.observe(el)
     el._observer = observer // store for cleanup
