@@ -179,7 +179,10 @@ import { ref, computed, reactive } from 'vue';
 import LocationIcon from './components/icons/LocationIcon.vue';
 
 const currentYear = computed(() => new Date().getFullYear());
-
+const form = reactive({
+  name: '',
+  email: '',
+  message: ''
 });
 const honeypot = ref('');
 const loading = ref(false);
