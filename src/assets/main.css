@@ -252,7 +252,7 @@ header {
   font-weight: var(--font-weight-black);
   text-transform: uppercase;
   line-height: 5rem;
-  border-right: 4px solid var(--accent-color);
+  border-right: 4px solid var(--accent-color); /* cursor */
   animation: typing 3s steps(20, end), blink 0.75s step-end infinite;
 }
 @keyframes typing {
@@ -514,6 +514,12 @@ header {
 }
 .social-title {
   margin-bottom: 0.5rem;
+}
+.social-link:hover {
+  transform: scale(1.0256);
+  cursor: pointer;
+  filter: brightness(2);
+  transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
 }
 .item-content {
   flex-direction: row;

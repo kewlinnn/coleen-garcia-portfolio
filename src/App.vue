@@ -115,10 +115,10 @@
           <div class="social-item">
             <h3 class="social-title">Social Media</h3>
             <div class="stack-container bs item-content">
-              <a href="https://www.linkedin.com/in/coleenagarcia" target="_blank">
+              <a href="https://www.linkedin.com/in/coleenagarcia" target="_blank" class="social-link">
                 <img src="./assets/images/socials-logo/linkedin.png" alt="linkedin logo">
               </a>
-              <a href="https://github.com/kewlinnn" target="_blank">
+              <a href="https://github.com/kewlinnn" target="_blank" class="social-link">
                 <img src="./assets/images/socials-logo/github.png" alt="github logo">
               </a>
             </div>
