@@ -206,7 +206,7 @@ const colors = {
 }
 
 const getIcon = (iconName) => {
-  const ICON_BASE_SRC = '../src/assets/images/';
+  const ICON_BASE_SRC = '@/assets/images/';
   return `${ICON_BASE_SRC}${iconName}.png`;
 }
 
@@ -286,7 +286,7 @@ const projects = [
     type: 'Bootcamp Project',
     stack: ['Vue', 'TypeScript', 'Pinia', 'CSS', 'Element Plus'],
     description: 'An interactive Keno lottery game with classic and mini game modes.',
-    image: '../src/assets/images/project-thumbnails/keno-plus.jpg',
+    image: '@/assets/images/project-thumbnails/keno-plus.jpg',
     link: 'https://keno-plus.vercel.app/',
     github:'https://github.com/kewlinnn/keno-plus',
   },
@@ -295,7 +295,7 @@ const projects = [
     type: 'Personal Project',
     stack: ['HTML', 'CSS', 'EJS', 'Node.js', 'Express.js', 'PokeAPI'],
     description: 'A dynamic Pokédex web app using PokeAPI to display and filter Pokémon data with server-side rendering.',
-    image: '../src/assets/images/project-thumbnails/dexhub.jpg',
+    image: '@/assets/images/project-thumbnails/dexhub.jpg',
     link: 'https://dexhub.onrender.com/',
     github:'https://github.com/kewlinnn/dexhub',
   },
@@ -304,7 +304,7 @@ const projects = [
     type: 'Personal Project',
     stack: ['HTML', 'CSS', 'EJS', 'Node.js', 'Express.js'],
     description: 'A blogging platform that allows users to create, edit, and share their blog posts.',
-    image: '../src/assets/images/project-thumbnails/blogit.jpg',
+    image: '@/assets/images/project-thumbnails/blogit.jpg',
     link: 'https://blogit-osvi.onrender.com/',
     github:'https://github.com/kewlinnn/blog-it',
   }
