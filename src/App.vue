@@ -139,6 +139,12 @@
           <h3 class="social-title txt-center">Send a message</h3>
 
           <form @submit.prevent="submit" class="stack-container form-details">
+            <!-- Honeypot field (hidden) -->
+            <label class="hp" aria-hidden="true">
+              Leave this field empty
+              <input type="text" v-model="honeypot" autocomplete="off" tabindex="-1" />
+            </label>
+
             <label for="user-name">Name</label>
             <input type="text" id="user-name" name="user-name" placeholder="Your Name" v-model="form.name" required>
   
@@ -179,7 +185,7 @@ const form = reactive({
   email: '',
   message: ''
 })
-
+const honeypot = ref('');
 const loading = ref(false);
 const status = ref(null);
 
@@ -332,6 +338,12 @@ const vIntersect = {
 }
 
 async function submit() {
+
+  if(honeypot.value) {
+    //bot detected - return immediately
+    return;
+  }
+  
   status.value = null;
   loading.value = true;
 

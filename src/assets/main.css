@@ -570,6 +570,12 @@ header {
 .form-btn:active {
   transform: translateY(2px); /* reset lift on click */
 }
+
+/* honeypot field */
+.hp {
+  display: none;
+}
+
 .status.success {
   color: rgb(62, 153, 62);
 }
