@@ -301,8 +301,6 @@ const vIntersect = {
         if (entry.isIntersecting) {
           el.classList.add('show')
           observer.unobserve(entry.target); // stop observing after first trigger
-        } else {
-          el.classList.remove('show')
         }
       },
       { threshold: 0.5 } // adjust sensitivity
