@@ -53,7 +53,7 @@
       <h2 v-intersect class="section-title linear-gradient-text bottom-target">Technical Skills</h2>
 
       <div class="skills-content">
-        <div v-intersect class="stack-container bs bottom-target" v-for="stack in skills">
+        <div v-intersect class="stack-container bs bottom-target" v-for="stack in Object.values(skills)">
           <h3 class="stack-title">{{ stack.name }}</h3>
           <div class="tech-wrapper flex-wrap">
             <div class="stack flex-gap-2" v-for="tech in stack.tech">
@@ -89,7 +89,7 @@
     <section id="projects" class="projects-section bg-gradient">
       <h2 v-intersect class="section-title fc-inverse bottom-target">Projects</h2>
       <div class="card-container">
-        <div v-intersect v-for="project in projects" class="card bs bottom-target">
+        <div v-intersect v-for="project in projects" :key="project.title" class="card bs bottom-target">
           <img :src="project.image" :alt="`${project.title} thumbnail`" class="project-image" draggable="false"/>
           <h3> {{ project.title }}</h3>
           <h4 class="project-type"> {{ project.type }}</h4>
@@ -116,10 +116,10 @@
             <h3 class="social-title">Social Media</h3>
             <div class="stack-container bs item-content">
               <a href="https://www.linkedin.com/in/coleenagarcia" target="_blank" class="social-link">
-                <img src="./assets/images/socials-logo/linkedin.png" alt="linkedin logo">
+                <img src="@/assets/images/socials-logo/linkedin.png" alt="linkedin logo">
               </a>
               <a href="https://github.com/kewlinnn" target="_blank" class="social-link">
-                <img src="./assets/images/socials-logo/github.png" alt="github logo">
+                <img src="../src/assets/images/socials-logo/github.png" alt="github logo">
               </a>
             </div>
           </div>
@@ -291,6 +291,9 @@ const projects = [
 ]
 
 // IntersectionObserver directive
+// This custom Vue directive adds a 'show' class to elements when they enter the viewport,
+// enabling scroll-based animations or transitions. It stops observing after the first intersection
+// for performance, and cleans up the observer when the element is unmounted.
 const vIntersect = {
   mounted(el) {
     const observer = new IntersectionObserver(
