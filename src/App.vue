@@ -169,9 +169,7 @@ import LocationIcon from './components/icons/LocationIcon.vue';
 const navbarItems = ref([
   { name: 'Home', link: '#home' },
   { name: 'About', link: '#about' },
-  { name: 'Skills', link: '#skills' },
   { name: 'Projects', link: '#projects' },
-  { name: 'Internship', link: '#internship' },
   { name: 'Contact', link: '#contact' }
 ])
 
