@@ -1,5 +1,20 @@
+let requests = {}
+
 // API route handler for contact form submissions
 export default async function handler(req, res) {
+
+  const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress
+  const now = Date.now()
+
+  // purge old requests (keep last 1 min)
+  requests[ip] = (requests[ip] || []).filter(ts => now - ts < 60000)
+
+  if (requests[ip].length >= 5) {
+    return res.status(429).json({ error: "Too many requests, try again later." })
+  }
+
+  requests[ip].push(now)
+  
   // Only allow POST requests
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
