@@ -583,10 +583,10 @@ footer {
     max-width: 20rem;
     justify-content: space-around;
     padding: 0rem 1rem;
-    border-left: 0.3rem solid rgba(255, 255, 255, 0.445);
-    border-right: 0.3rem solid rgba(255, 255, 255, 0.445);
+    border-left: 0.2rem solid rgb(104, 31, 31);
+    border-right: 0.2rem solid rgb(104, 31, 31);
     border-bottom: none;
-    border-top: 0.3rem solid rgba(255, 255, 255, 0.445);
+    border-top: 0.2rem solid rgb(104, 31, 31);
     border-radius: 20px 20px 0px 0px;
     position: fixed;
     bottom: 0;
