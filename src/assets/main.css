@@ -616,7 +616,8 @@ footer {
     justify-content: center;
     text-align: center;
     gap: 2rem;
-    padding-block: 5rem;
+    padding: 5rem 2rem;
+    margin-top: 2.5rem;
   }
   .hero-name {
     font-size: 3rem;
@@ -636,8 +637,12 @@ footer {
     width: 100%;
     flex-wrap: wrap;
   }
+  .about-section {
+    margin-top: -5px;
+  }
   .about-desc {
     text-align: center;
+    padding-inline: 1.5rem;
   }
   .timeline::after {
     left: 20px;
