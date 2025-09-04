@@ -35,19 +35,16 @@
 
 /*CSS reset*/
 /* Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Remove default margin */
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
-  margin: 0%;
-  padding: 0%;
-
-}
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-/* Remove default margin */
-* {
-  margin: 0;
 }
 
 /*utility classes*/
@@ -185,7 +182,9 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
-
+html, body {
+  overflow-x: hidden;
+}
 body {
   font-family: var(--font-family);
   font-size: var(--font-size);
@@ -193,6 +192,7 @@ body {
   background-color: var(--primary-color);
   font-weight: var(--font-weight-normal);
   margin: 0;
+  padding: 0;
 
   /*grid background*/
   background-image:
@@ -200,26 +200,32 @@ body {
     linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
   background-size: 30px 30px; /* grid spacing */
 }
-section {
-  padding-inline: 1rem;
-  padding-block: 2rem;
-  width: 100%;
-}
 header {
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 1rem;
-  position: sticky;
+  position: fixed;
+  background-color: transparent;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
+}
+section {
+  padding-inline: 2rem;
+  padding-block: 2rem;
+  width: 100%;
 }
 .navbar {
   background-color: var(--secondary-color);
   color: var(--text-color-inverse);
+  width: max-content;
   padding: 1rem 2rem;
   display: flex;
   gap: 1rem;
-  border: 5px solid rgba(255, 255, 255, 0.445);
+  border: 5px solid rgb(104, 31, 31);
   border-radius: var(--border-radius-full);
   overflow: hidden;
   transition: background 0.3s, color 0.3s, border-bottom 0.3s, transform 0.2s;
@@ -241,7 +247,8 @@ header {
   }
 .hero-section {
   gap: 6rem;
-  padding-block: 0.678rem;
+  margin-top: 4.5rem;
+  min-height: 60dvh;
 }
 .hero-greeting {
   font-size: var(--font-size-header);
@@ -409,27 +416,6 @@ header {
     .internship-description li {
       margin-bottom: 0.5rem;
     }
-
-    @media screen and (max-width: 768px) {
-      .timeline::after {
-        left: 20px;
-      }
-
-      .timeline-item {
-        width: 100%;
-        padding-left: 50px;
-        padding-right: 25px;
-      }
-
-      .timeline-item::after {
-        left: 10px;
-      }
-
-      .right {
-        left: 0%;
-      }
-    }
-
 .card-container {
   display: grid;
   gap: 1rem;
@@ -589,4 +575,98 @@ footer {
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+}
+
+
+@media (max-width: 767.98px) {
+  body {
+    background-size: 20px 20px; /* smaller grid spacing for mobile */
+  }
+  header {
+    width: 100%;
+    width: 100vw;
+  }
+  .navbar {
+    width: 100%;
+    max-width: 20rem;
+    justify-content: space-around;
+    padding: 0rem 1rem;
+    border-left: 0.2rem solid rgb(104, 31, 31);
+    border-right: 0.2rem solid rgb(104, 31, 31);
+    border-bottom: none;
+    border-top: 0.2rem solid rgb(104, 31, 31);
+    border-radius: 20px 20px 0px 0px;
+    position: fixed;
+    bottom: 0;
+  }
+  .navbar-item {
+    font-size: var(--font-size-small);
+    padding: 1rem 0rem;
+    width: 100%;
+    text-align: center;
+  }
+  .navbar-item:hover {
+    border-radius: 0;
+  }
+  section {
+    padding-inline: 1rem;
+  }
+  .hero-section {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 5rem 2rem;
+    margin-top: 2.5rem;
+  }
+  .hero-name {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .hero-greeting {
+    font-size: var(--font-size-large);
+  }
+  .hero-job {
+    font-size: var(--font-size-header);
+  }
+  .hero-image {
+    width: 100%;
+    max-width: 350px;
+  }
+  .tech-wrapper {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .about-section {
+    margin-top: -5px;
+  }
+  .about-desc {
+    text-align: center;
+    padding-inline: 1.5rem;
+  }
+  .timeline::after {
+    left: 20px;
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 25px;
+  }
+
+  .timeline-item::after {
+    left: 10px;
+  }
+
+  .right {
+    left: 0%;
+  }
+
+  .social-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  footer {
+    padding-bottom: 5rem;
+  }
 }
