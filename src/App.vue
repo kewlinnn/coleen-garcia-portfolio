@@ -357,10 +357,14 @@ async function submit() {
 
     status.value = { type: "success", message: "Message sent successfully!" };
     form.name = form.email = form.message = "";
+
   } catch (err) {
     status.value = { type: "error", message: err.message };
   } finally {
     loading.value = false;
+    setTimeout(() => {
+      status.value = null;
+    }, 3000);
   }
 }
 </script>
