@@ -247,8 +247,8 @@ section {
   }
 .hero-section {
   gap: 6rem;
-  padding-block: 0.678rem;
-  min-height: 70dvh;
+  margin-top: 4.5rem;
+  min-height: 60dvh;
 }
 .hero-greeting {
   font-size: var(--font-size-header);
