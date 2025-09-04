@@ -44,6 +44,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 /*utility classes*/
@@ -205,12 +206,12 @@ header {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  position: sticky;
+  position: fixed;
+  background-color: transparent;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: var(--primary-color);
 }
 section {
   padding-inline: 2rem;
@@ -247,6 +248,7 @@ section {
 .hero-section {
   gap: 6rem;
   padding-block: 0.678rem;
+  min-height: 70dvh;
 }
 .hero-greeting {
   font-size: var(--font-size-header);
