@@ -199,26 +199,32 @@ body {
     linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
   background-size: 30px 30px; /* grid spacing */
 }
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--primary-color);
+}
 section {
   padding-inline: 2rem;
   padding-block: 2rem;
   width: 100%;
 }
-header {
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
 .navbar {
   background-color: var(--secondary-color);
   color: var(--text-color-inverse);
+  width: max-content;
   padding: 1rem 2rem;
   display: flex;
   gap: 1rem;
-  border: 5px solid rgba(255, 255, 255, 0.445);
+  border: 5px solid rgb(104, 31, 31);
   border-radius: var(--border-radius-full);
   overflow: hidden;
   transition: background 0.3s, color 0.3s, border-bottom 0.3s, transform 0.2s;
