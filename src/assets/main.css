@@ -228,7 +228,7 @@ section {
   border: 5px solid rgb(104, 31, 31);
   border-radius: var(--border-radius-full);
   overflow: hidden;
-  transition: background 0.3s, color 0.3s, border-bottom 0.3s, transform 0.2s;
+  transition: all 0.3s ease;
 }
   .navbar-item {
     font-size: var(--font-size-normal);
@@ -241,6 +241,7 @@ section {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.445);
     border-radius: var(--border-radius-full);
+    color: rgb(104, 31, 31);
   }
   .navbar-item:active {
     transform: scale(0.95);
