@@ -28,7 +28,6 @@
       </div>
 
       <img v-intersect src="@/assets/images/coleen-image.png" alt="my picture" class="hero-image right-target" draggable="false"/>
-      <p>test</p>
     </section>
 
     <img src="@/assets/images/wave.svg" alt="wave transition" class="wave-transition" draggable="false" />
