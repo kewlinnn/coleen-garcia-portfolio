@@ -381,15 +381,22 @@ section {
   max-width: 100%;
   border-radius: var(--border-radius-lg);
   max-height: 40rem;
-  border: 0.5rem solid rgb(104, 31, 31);
-
+  border: 0.3rem solid var(--secondary-color);
+  box-shadow:
+    0 4px 20px rgba(160, 71, 71, 0.15),
+    0 0 0 4px rgba(216, 162, 94, 0.12),
+    0 0 0 10px rgba(238, 223, 122, 0.08);
+  outline: 2px dashed rgba(255, 255, 255, 0.445);
+  outline-offset: 2px;
+  background-image:
+    linear-gradient(135deg, rgba(216,162,94,0.08) 0%, rgba(160,71,71,0.08) 100%);
   opacity: 0;
   transform: scale(0.8) translateY(40px) rotate(-5deg);
   filter: blur(8px) brightness(0.8);
   transition:
-    opacity 0.9s cubic-bezier(0.23, 1, 0.32, 1) 0.3s,
-    transform 0.9s cubic-bezier(0.23, 1, 0.32, 1) 0.3s,
-    filter 0.9s cubic-bezier(0.23, 1, 0.32, 1) 0.3s;
+    opacity 0.9s cubic-bezier(0.23, 1, 0.32, 1),
+    transform 0.9s cubic-bezier(0.23, 1, 0.32, 1),
+    filter 0.9s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .about-image.show {
