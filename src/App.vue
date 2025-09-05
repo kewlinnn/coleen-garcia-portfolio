@@ -25,10 +25,16 @@
       <div class="about-content flex-align flex-wrap">
         <div v-intersect class="about-desc left-target">
           <p class="text-light">
-            My journey into web development began with a love for the arts — from drawing and design to crafting digital visuals. That passion naturally evolved into building user interfaces that are not just functional, but also visually engaging and intuitive.
+            Hi, I’m Coleen Garcia, a Software Developer based in Pasig City, Philippines. I graduated with a bachelor's degree in computer science and I love creating modern, responsive web and mobile applications that balance clean code with intuitive design.
           </p>
           <p class="text-light">
-            I specialize in creating responsive websites and mobile apps using Vue.js, React Native, and design tools like Figma and Canva. I thrive on transforming ideas into seamless digital experiences. Whether it’s designing wireframes or implementing interactive features, I aim to make every project both beautiful and usable.
+            I bring ideas to life by transforming wireframes and mockups into interactive products. My niche is in bridging design and development — I don’t just make apps functional, I ensure they’re visually engaging and user-friendly.
+          </p>
+          <p class="text-light">
+            During my internships, I gained hands-on experience building and maintaining applications using Vue, React, React Native, and Wordpress. I also got to experience collaborating with teams, improving my problem-solving skills, and optimizing my design-to-code workflow.
+          </p>
+          <p class="text-light">
+            Beyond coding, I enjoy activities that challenge my creativity and critical thinking. You’ll often find me playing chess to sharpen my problem-solving skills, reading to broaden my perspective, or sketching random ideas as a way to explore visual creativity.
           </p>
         </div>
         <div v-intersect class="about-education bs right-target">
