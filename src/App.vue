@@ -33,7 +33,7 @@
 
         <img v-intersect src="@/assets/images/about-image.jpg" alt="Coleen Garcia" draggable="false" class="about-image"/>
         <div v-intersect class="about-desc bottom-target">
-          <h3 v-intersect class="txt-md italic bottom-target">A little bit about myself</h3>
+          <h3 v-intersect class="txt-md italic bottom-target subtitle">A little bit about myself</h3>
           <div class="about-text">
             <p v-intersect class="text-light bottom-target">
               Hi, I’m Coleen Garcia, a Software Developer based in Pasig City, Philippines. I graduated with a bachelor's degree in computer science and I love creating modern, responsive web and mobile applications that balance clean code with intuitive design.
@@ -341,7 +341,7 @@ const vIntersect = {
           observer.unobserve(entry.target); // stop observing after first trigger
         }
       },
-      { threshold: 1 } // adjust sensitivity
+      { threshold: 0.1 } // adjust sensitivity
     )
     observer.observe(el)
     el._observer = observer // store for cleanup

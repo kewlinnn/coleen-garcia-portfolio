@@ -397,6 +397,10 @@ section {
   transform: scale(1) translateY(0) rotate(0deg);
   filter: blur(0) brightness(1);
 }
+.subtitle {
+  width: fit-content;
+  border-bottom: 0.3rem solid var(--accent-color);
+}
 .about-desc {
   background-color: var(--primary-color);
   padding: 1rem;
@@ -755,8 +759,6 @@ footer {
   .about-desc {
     text-align: left;
     padding-inline: 1.5rem;
-    border: 1px solid yellow;
-
   }
   .timeline::after {
     left: 20px;
