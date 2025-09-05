@@ -418,16 +418,13 @@ section {
   border-radius: var(--border-radius-lg);
   box-shadow: var(--box-shadow-1);
 }
-.about-desc p {
+.about-p {
   max-width: 70ch;
   margin-block: 1rem;
   font-size: var(--font-size-normal);
   color: var(--text-color-primary);
   border-left: 1px solid var(--text-color-secondary);
   padding-left: 1rem;
-}
-.about-education p {
-  border-left: none;
 }
 .about-education {
   background-color: var(--primary-color);
