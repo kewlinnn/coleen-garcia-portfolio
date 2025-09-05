@@ -36,7 +36,9 @@
       <h2 v-intersect class="section-title light bottom-target">About me</h2>
       <div class="about-content flex-align flex-wrap">
 
-        <img v-intersect src="@/assets/images/about-image.jpg" alt="Coleen Garcia" draggable="false" class="about-image"/>
+        <div class="about-image-container">
+          <img v-intersect src="@/assets/images/about-image.jpg" alt="Coleen Garcia" draggable="false" class="about-image"/>
+        </div>
         <div v-intersect class="about-desc bottom-target">
           <h3 v-intersect class="txt-md italic bottom-target subtitle">A little bit about myself</h3>
           <div class="about-text">
