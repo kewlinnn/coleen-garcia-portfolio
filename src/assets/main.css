@@ -312,9 +312,9 @@ section {
   border: 2px solid rgb(104, 31, 31);
 }
   .cta-2:hover {
-    background-color: var(--accent-color);
-    color: var(--text-color-inverse);
-    border: 2px solid var(--accent-color-light);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
   }
 .hero-image {
   max-height: 500px;
