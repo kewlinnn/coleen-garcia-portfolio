@@ -262,7 +262,7 @@ section {
   line-height: 5rem;
   width: fit-content;
   /* animation: typing 3s steps(20, end), blink 0.75s step-end infinite; */
-  animation: floatImage 2s ease-in-out infinite;
+  animation: floatName 2s ease-in-out infinite;
 }
 
 @keyframes floatName {
@@ -273,7 +273,7 @@ section {
 .hero-description {
   background-color: lightgray;
   color: var(--soft-black);
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   font-family: 'Courier New', Courier, monospace;
   font-weight: var(--font-weight-normal);
   border-radius: var(--border-radius);

@@ -174,7 +174,7 @@
               {{ status.message }}
             </p>
 
-            <p class="txt-center txt-small">I value your privacy. Your information will never be shared with third parties.</p>
+            <p class="txt-center txt-small">I value your privacy. The information you provide will only be used for communication purposes.</p>
           </form>
         </div>
       </div>
