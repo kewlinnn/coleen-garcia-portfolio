@@ -17,8 +17,13 @@
         <p class="hero-description txt-lg">I build modern responsive web & mobile apps</p>
 
         <div class="cta-container">
-          <button class="cta-button cta-1">View My Work</button>
-          <button class="cta-button cta-2">Let's Connect</button>
+          <a href="#projects">
+            <button class="cta-button cta-1">
+              View My Work</button>
+          </a>
+          <a href="#contact">
+            <button class="cta-button cta-2">Let's Connect</button>
+          </a>
         </div>
       </div>
 
