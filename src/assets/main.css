@@ -262,6 +262,47 @@ section {
   line-height: 5rem;
   border-right: 4px solid var(--accent-color); /* cursor */
   animation: typing 3s steps(20, end), blink 0.75s step-end infinite;
+  animation: floatName 2s ease-in-out infinite;
+}
+
+@keyframes floatName {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.hero-description {
+  background-color: lightgray;
+  color: var(--soft-black);
+  padding: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: var(--font-weight-normal);
+  border-radius: var(--border-radius);
+  width: fit-content;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--accent-color);
+  animation: typewriter 6s steps(35, end) infinite, blink-caret 0.75s step-end infinite;
+}
+@media (max-width: 767.98px) {
+  .hero-description {
+    font-size: var(--font-size-small);
+    padding: 0.5rem;
+    white-space: normal;
+    width: 100%;
+    animation: none;
+    border-right: none;
+  }
+}
+@keyframes typewriter {
+  0% { width: 0; }
+  50% { width: 100%; }
+  100% { width: 0; }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: var(--accent-color); }
 }
 @keyframes typing {
   from { width: 0 }
