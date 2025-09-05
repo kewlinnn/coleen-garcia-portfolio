@@ -14,7 +14,7 @@
           <span class="hero-name linear-gradient-text typewriter">Coleen Garcia</span>
         </h2>
         <h3 class="hero-job">Software Developer</h3>
-        <p class="hero-description">I build modern responsive web & mobile apps</p>
+        <p class="hero-description txt-lg">I build modern responsive web & mobile apps</p>
 
         <div class="cta-container">
           <button class="cta-button cta-1">View My Work</button>

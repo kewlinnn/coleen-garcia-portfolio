@@ -278,6 +278,44 @@ section {
   max-width: 70ch;
   margin-top: 1rem;
 }
+.cta-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.cta-button {
+  padding: 1rem;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--border-radius-full);
+  border: none;
+  box-shadow: var(--box-shadow-2);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease, border 0.1s ease;
+  cursor: pointer;
+}
+  .cta-button:active {
+    transform: translateY(2px); /* lift effect on click */
+  }
+.cta-1 {
+  background-color: var(--soft-black);
+  color: var(--text-color-inverse);
+  border: 2px solid var(--text-color-secondary);
+}
+  .cta-1:hover {
+    background-color: var(--primary-color);
+    color: var(--soft-black);
+    border: 2px solid var(--soft-black);
+  }
+.cta-2 {
+  background-color: var(--secondary-color);
+  color: var(--text-color-inverse);
+  border: 2px solid rgb(104, 31, 31);
+}
+  .cta-2:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color-inverse);
+    border: 2px solid var(--accent-color-light);
+  }
 .hero-image {
   max-height: 500px;
   animation: floatImage 2s ease-in-out infinite;
