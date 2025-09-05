@@ -30,22 +30,27 @@
     <section id="about" class="about-section bg-gradient">
       <h2 v-intersect class="section-title light bottom-target">About me</h2>
       <div class="about-content flex-align flex-wrap">
-        <div v-intersect class="about-desc left-target">
-          <p class="text-light">
-            Hi, I’m Coleen Garcia, a Software Developer based in Pasig City, Philippines. I graduated with a bachelor's degree in computer science and I love creating modern, responsive web and mobile applications that balance clean code with intuitive design.
-          </p>
-          <p class="text-light">
-            I bring ideas to life by transforming wireframes and mockups into interactive products. My niche is in bridging design and development — I don’t just make apps functional, I ensure they’re visually engaging and user-friendly.
-          </p>
-          <p class="text-light">
-            During my internships, I gained hands-on experience building and maintaining applications using Vue, React, React Native, and Wordpress. I also got to experience collaborating with teams, improving my problem-solving skills, and optimizing my design-to-code workflow.
-          </p>
-          <p class="text-light">
-            Beyond coding, I enjoy activities that challenge my creativity and critical thinking. You’ll often find me playing chess to sharpen my problem-solving skills, reading to broaden my perspective, or sketching random ideas as a way to explore visual creativity.
-          </p>
-        </div>
-        <div v-intersect class="about-education bs right-target">
-          <p class="txt-lg bold">Bachelor of Science in Computer Science</p>
+
+        <img v-intersect src="@/assets/images/about-image.jpg" alt="Coleen Garcia" draggable="false" class="about-image"/>
+        <div v-intersect class="about-desc bottom-target">
+          <h3 v-intersect class="txt-md italic bottom-target">A little bit about myself</h3>
+          <div class="about-text">
+            <p v-intersect class="text-light bottom-target">
+              Hi, I’m Coleen Garcia, a Software Developer based in Pasig City, Philippines. I graduated with a bachelor's degree in computer science and I love creating modern, responsive web and mobile applications that balance clean code with intuitive design.
+            </p>
+            <p v-intersect class="text-light bottom-target">
+              I bring ideas to life by transforming wireframes and mockups into interactive products. My niche is in bridging design and development — I don’t just make apps functional, I ensure they’re visually engaging and user-friendly.
+            </p>
+            <p v-intersect class="text-light bottom-target">
+              During my internships, I gained hands-on experience building and maintaining applications using Vue, React, React Native, and Wordpress. I also got to experience collaborating with teams, improving my problem-solving skills, and optimizing my design-to-code workflow.
+            </p>
+            <p v-intersect class="text-light bottom-target">
+              Beyond coding, I enjoy activities that challenge my creativity and critical thinking. You’ll often find me playing chess to sharpen my problem-solving skills, reading to broaden my perspective, or sketching random ideas as a way to explore visual creativity.
+            </p>
+          </div>
+
+          <div v-intersect class="about-education bs bottom-target">
+          <p class="txt-lg bold linear-gradient-text">Bachelor of Science in Computer Science</p>
           <p class="txt-md bold">Technological University of the Philippines</p>
           <p class="txt-sm italic">Cum Laude</p>
           <div class="flex-group">
@@ -58,6 +63,7 @@
               <span>Manila, Philippines</span>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>

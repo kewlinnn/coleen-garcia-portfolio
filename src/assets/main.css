@@ -269,8 +269,13 @@ section {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
-
+.hero-job {
+  font-size: var(--font-size-header);
+  font-weight: var(--font-weight-bold);
+}
 .hero-description {
+  max-width: 70ch;
+  margin-top: 1rem;
   background-color: lightgray;
   color: var(--soft-black);
   padding: 0.5rem 1rem;
@@ -311,14 +316,6 @@ section {
 @keyframes blink {
   0%, 100% { border-color: transparent; }
   50% { border-color: var(--accent-color); }
-}
-.hero-job {
-  font-size: var(--font-size-header);
-  font-weight: var(--font-weight-bold);
-}
-.hero-description {
-  max-width: 70ch;
-  margin-top: 1rem;
 }
 .cta-container {
   display: flex;
@@ -380,19 +377,51 @@ section {
   gap: 5rem;
   margin-bottom: 8rem;
 }
+.about-image {
+  max-width: 100%;
+  border-radius: var(--border-radius-lg);
+  max-height: 40rem;
+  border: 0.5rem solid rgb(104, 31, 31);
+
+  opacity: 0;
+  transform: scale(0.8) translateY(40px) rotate(-5deg);
+  filter: blur(8px) brightness(0.8);
+  transition:
+    opacity 0.9s cubic-bezier(0.23, 1, 0.32, 1),
+    transform 0.9s cubic-bezier(0.23, 1, 0.32, 1),
+    filter 0.9s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.about-image.show {
+  opacity: 1;
+  transform: scale(1) translateY(0) rotate(0deg);
+  filter: blur(0) brightness(1);
+}
+.about-desc {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow-1);
+}
 .about-desc p {
   max-width: 70ch;
   margin-block: 1rem;
+  font-size: var(--font-size-normal);
+  color: var(--text-color-primary);
 }
-
 .about-education {
   background-color: var(--primary-color);
   padding: 1rem;
   border-radius: var(--border-radius-lg);
+  border: 1px solid var(--secondary-color);
+}
+.about-education p {
+  margin: 0;
 }
 .about-education .flex-group {
   margin-top: 1rem;
 }
+
 .skills-content {
   display: flex;
   flex-direction: column;
@@ -717,12 +746,17 @@ footer {
     width: 100%;
     flex-wrap: wrap;
   }
+  .about-content {
+    gap: 1rem;
+  }
   .about-section {
     margin-top: -5px;
   }
   .about-desc {
-    text-align: center;
+    text-align: left;
     padding-inline: 1.5rem;
+    border: 1px solid yellow;
+
   }
   .timeline::after {
     left: 20px;
