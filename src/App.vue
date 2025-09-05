@@ -11,13 +11,20 @@
     <section id="home" class="hero-section flex-align flex-wrap">
       <div v-intersect class="hero-text left-target">
         <h2 class="hero-greeting">Hello I'm <br />
-        <span class="hero-name linear-gradient-text typewriter">Coleen Garcia</span>
-      </h2>
-      <h3 class="hero-job">Web Developer</h3>
-      <p class="hero-description">I’m a web developer focused on front-end development with a strong foundation in Vue.js, React Native, and UI/UX design, I love turning ideas into interactive digital experiences. Whether I’m coding layouts or refining user flows in Figma, I aim to create intuitive solutions that leave a lasting impact.</p>
+          <span class="hero-name linear-gradient-text typewriter">Coleen Garcia</span>
+        </h2>
+        <h3 class="hero-job">Software Developer</h3>
+        <p class="hero-description">I build modern responsive web & mobile apps</p>
+
+        <div class="cta-container">
+          <button class="cta-button cta-1">View My Work</button>
+          <button class="cta-button cta-2">Let's Connect</button>
+        </div>
       </div>
+
       <img v-intersect src="@/assets/images/coleen-image.png" alt="my picture" class="hero-image right-target" draggable="false"/>
     </section>
+
     <img src="@/assets/images/wave.svg" alt="wave transition" class="wave-transition" draggable="false" />
 
     <section id="about" class="about-section bg-gradient">
