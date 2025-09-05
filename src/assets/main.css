@@ -756,6 +756,18 @@ footer {
     width: 100%;
     max-width: 350px;
   }
+  .cta-container {
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem auto 0 auto;
+  }
+  .cta-button {
+    flex: 1;
+    font-size: var(--font-size-small);
+    padding: 0.75rem;
+  }
   .tech-wrapper {
     width: 100%;
     flex-wrap: wrap;
