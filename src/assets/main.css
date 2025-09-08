@@ -381,7 +381,6 @@ section {
   }
 }
 .about-section {
-  margin-top: -10px;
   padding-bottom: 1rem;
 }
 .about-content {
@@ -788,9 +787,6 @@ footer {
   }
   .about-content {
     gap: 1rem;
-  }
-  .about-section {
-    margin-top: -1px; 
   }
   .about-desc {
     text-align: left;
