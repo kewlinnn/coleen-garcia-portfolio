@@ -160,6 +160,7 @@ body {
   font-weight: var(--font-weight-normal);
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s, color 0.3s;
 
   /*grid background*/
   background-image:
