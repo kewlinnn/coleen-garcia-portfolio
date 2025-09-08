@@ -5,6 +5,7 @@
         <span>{{ item.name }}</span>
       </a>
     </nav>
+    <ThemeToggle />
   </header>
 
   <main>
@@ -203,6 +204,7 @@
 import CalendarIcon from './components/icons/CalendarIcon.vue';
 import { ref, computed, reactive } from 'vue';
 import LocationIcon from './components/icons/LocationIcon.vue';
+import ThemeToggle from './components/ThemeToggle.vue';
 
 const currentYear = computed(() => new Date().getFullYear());
 const form = reactive({
