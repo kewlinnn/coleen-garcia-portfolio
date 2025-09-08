@@ -11,38 +11,64 @@
     <section id="home" class="hero-section flex-align flex-wrap">
       <div v-intersect class="hero-text left-target">
         <h2 class="hero-greeting">Hello I'm <br />
-        <span class="hero-name linear-gradient-text typewriter">Coleen Garcia</span>
-      </h2>
-      <h3 class="hero-job">Web Developer</h3>
-      <p class="hero-description">I’m a web developer focused on front-end development with a strong foundation in Vue.js, React Native, and UI/UX design, I love turning ideas into interactive digital experiences. Whether I’m coding layouts or refining user flows in Figma, I aim to create intuitive solutions that leave a lasting impact.</p>
+          <span class="hero-name linear-gradient-text typewriter">Coleen Garcia</span>
+        </h2>
+        <h3 class="hero-job">Software Developer</h3>
+        <p class="hero-description txt-lg">I build modern responsive web & mobile apps</p>
+
+        <div class="cta-container">
+          <a href="#projects">
+            <button class="cta-button cta-1">View My Work</button>
+          </a>
+          <a href="#contact">
+            <button class="cta-button cta-2">Let's Connect</button>
+          </a>
+        </div>
       </div>
-      <img v-intersect src="@/assets/images/coleen-image.png" alt="my picture" class="hero-image right-target" draggable="false"/>
+
+      <div class="hero-image-container">
+        <img v-intersect src="@/assets/images/coleen-image.png" alt="my picture" class="hero-image right-target" draggable="false"/>
+      </div>
     </section>
-    <img src="@/assets/images/wave.svg" alt="wave transition" class="wave-transition" draggable="false" />
+
+    <div class="wave-container">
+      <svg
+      viewBox="0 27.38738738738739 1440 211.8918918918919"
+      xmlns="http://www.w3.org/2000/svg"
+      class="wave-transition"
+      preserveAspectRatio="none">
+        <path d="M0,160L48,181.3C96,203,192,245,288,224C384,203,480,117,576,85.3C672,53,768,75,864,106.7C960,139,1056,181,1152,170.7C1248,160,1344,96,1392,64L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill-opacity="1" fill="#A04747"/>
+      </svg>
+    </div>
 
     <section id="about" class="about-section bg-gradient">
       <h2 v-intersect class="section-title light bottom-target">About me</h2>
       <div class="about-content flex-align flex-wrap">
-        <div v-intersect class="about-desc left-target">
-          <p class="text-light">
-            My journey into web development began with a love for the arts — from drawing and design to crafting digital visuals. That passion naturally evolved into building user interfaces that are not just functional, but also visually engaging and intuitive.
-          </p>
-          <p class="text-light">
-            I specialize in creating responsive websites and mobile apps using Vue.js, React Native, and design tools like Figma and Canva. I thrive on transforming ideas into seamless digital experiences. Whether it’s designing wireframes or implementing interactive features, I aim to make every project both beautiful and usable.
-          </p>
+
+        <div class="about-image-container">
+          <img v-intersect src="@/assets/images/about-image.jpg" alt="Coleen Garcia" draggable="false" class="about-image"/>
         </div>
-        <div v-intersect class="about-education bs right-target">
-          <p class="txt-lg bold">Bachelor of Science in Computer Science</p>
-          <p class="txt-md bold">Technological University of the Philippines</p>
-          <p class="txt-sm italic">Cum Laude</p>
-          <div class="flex-group">
-            <div class="educ-item flex-align flex-gap-1">
-              <CalendarIcon :color="colors.softBlack" />
-              <span>2020 - 2024</span>
-            </div>
-            <div class="educ-item flex-align flex-gap-1">
-              <LocationIcon :color="colors.softBlack" />
-              <span>Manila, Philippines</span>
+        <div v-intersect class="about-desc bottom-target">
+          <h3 v-intersect class="txt-md italic bottom-target subtitle">A little bit about myself</h3>
+          <div class="about-text">
+            <p v-intersect class="text-light bottom-target about-p" v-for="(text, id) in aboutMe" :key="id">
+              {{ text }}
+            </p>
+          </div>
+
+          <div v-intersect class="about-education bs bottom-target">
+            <p class="txt-lg bold linear-gradient-text">Bachelor of Science in Computer Science</p>
+            <p class="txt-md bold">Technological University of the Philippines</p>
+            <p class="txt-sm italic">Cum Laude</p>
+            <div class="flex-group">
+              <div class="educ-item flex-align flex-gap-1">
+                <CalendarIcon :color="colors.softBlack" />
+                <span>2020 - 2024</span>
+              </div>
+              <div class="educ-item flex-align flex-gap-1">
+                <LocationIcon :color="colors.softBlack" />
+                <span>Manila, Philippines</span>
+              </div>
             </div>
           </div>
         </div>
@@ -161,7 +187,7 @@
               {{ status.message }}
             </p>
 
-            <p class="txt-center txt-small">I value your privacy. Your information will never be shared with third parties.</p>
+            <p class="txt-center txt-small">I value your privacy. The information you provide will only be used for communication purposes.</p>
           </form>
         </div>
       </div>
@@ -209,6 +235,12 @@ const getIcon = (iconName) => {
   return `images/tech/${iconName}.png`;
 }
 
+const aboutMe = [
+  "Hi, I’m Coleen Garcia, a Software Developer based in Pasig City, Philippines. I graduated with a bachelor's degree in computer science and I love creating modern, responsive web and mobile applications that balance clean code with intuitive design.",
+  "I bring ideas to life by transforming wireframes and mockups into interactive products. My niche is in bridging design and development — I don’t just make apps functional, I ensure they’re visually engaging and user-friendly.",
+  "During my internships, I gained hands-on experience building and maintaining applications using Vue, React, React Native, and Wordpress. I also got to experience collaborating with teams, improving my problem-solving skills, and optimizing my design-to-code workflow.",
+  "Beyond coding, I enjoy activities that challenge my creativity and critical thinking. You’ll often find me playing chess to sharpen my problem-solving skills, reading to broaden my perspective, or sketching random ideas as a way to explore visual creativity."
+]
 const skills = {
   frontend:{
     name: "Front-end",
