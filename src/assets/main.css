@@ -374,10 +374,8 @@ section {
   width: 100%;
   min-width: 100vw;
   height: auto;
-  border: 1px solid lime; /* --- IGNORE --- */
 }
 .about-section {
-  /* background-color: var(--secondary-color); */
   margin-top: -10px;
   padding-bottom: 1rem;
 }
