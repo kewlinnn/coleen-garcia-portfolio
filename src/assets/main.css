@@ -285,7 +285,6 @@ section {
 }
 @media (max-width: 767.98px) {
   .hero-text {
-    border: 1px solid lime;
     display: flex;
     flex-direction: column;
     justify-content: center;
