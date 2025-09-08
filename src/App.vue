@@ -32,7 +32,13 @@
     </section>
 
     <div class="wave-container">
-      <img src="@/assets/images/wave.svg" alt="wave transition" class="wave-transition" draggable="false" />
+      <svg
+      viewBox="0 27.38738738738739 1440 211.8918918918919"
+      xmlns="http://www.w3.org/2000/svg"
+      class="wave-transition"
+      preserveAspectRatio="none">
+        <path d="M0,160L48,181.3C96,203,192,245,288,224C384,203,480,117,576,85.3C672,53,768,75,864,106.7C960,139,1056,181,1152,170.7C1248,160,1344,96,1392,64L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill-opacity="1" fill="#A04747"/>
+      </svg>
     </div>
 
     <section id="about" class="about-section bg-gradient">

@@ -369,11 +369,16 @@ section {
   50% { transform: translateY(-10px); }
 }
 
-.wave-transition {
+.wave-container {
   transform: rotateY(180deg);
+  display: flex;
   width: 100%;
-  width: 100vw;
-  height: auto;
+  min-width: 100vw;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
 }
 .about-section {
   margin-top: -10px;
@@ -785,7 +790,7 @@ footer {
     gap: 1rem;
   }
   .about-section {
-    margin-top: -6px; 
+    margin-top: -1px; 
   }
   .about-desc {
     text-align: left;
