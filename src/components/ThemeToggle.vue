@@ -38,6 +38,8 @@ onMounted(() => {
 @import '../assets/base.css';
 
 .theme-toggle {
+  height: 3rem;
+  width: 3rem;
   background: var(--primary-color);
   border: none;
   cursor: pointer;
@@ -62,10 +64,10 @@ onMounted(() => {
 .theme-toggle.dark:hover {
   box-shadow: 0 0 2px 2px var(--primary-color), var(--box-shadow-2);
 }
-.light-mode-icon, .dark-mode-icon {
+/* .light-mode-icon, .dark-mode-icon {
   height: 2rem;
   width: 2rem;
-}
+} */
 .light-mode-icon {
   background-color: var(--primary-color);
 }
