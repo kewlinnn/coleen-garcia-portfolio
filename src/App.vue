@@ -31,7 +31,9 @@
       </div>
     </section>
 
-    <img src="@/assets/images/wave.svg" alt="wave transition" class="wave-transition" draggable="false" />
+    <div class="wave-container">
+      <img src="@/assets/images/wave.svg" alt="wave transition" class="wave-transition" draggable="false" />
+    </div>
 
     <section id="about" class="about-section bg-gradient">
       <h2 v-intersect class="section-title light bottom-target">About me</h2>
