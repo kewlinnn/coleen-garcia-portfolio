@@ -355,9 +355,12 @@ section {
     color: var(--secondary-color);
     border: 2px solid var(--secondary-color);
   }
-.hero-image {
+.hero-image-container {
   max-height: 500px;
   animation: floatImage 2s ease-in-out infinite;
+}
+.hero-image {
+  max-height: 500px;
 }
 @keyframes floatImage {
   0%, 100% { transform: translateY(0); }
