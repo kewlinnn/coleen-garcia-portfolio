@@ -1,0 +1,14 @@
+@import '../assets/base.css';
+
+.dark-mode {
+  --primary-color: #222;
+  --secondary-color: #F19E39;
+  background-color: #222;
+  color: #fff;
+}
+
+/* Add more selectors as needed */
+.dark-mode h1,
+.dark-mode p {
+  color: #fff;
+}
