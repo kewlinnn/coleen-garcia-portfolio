@@ -377,11 +377,10 @@ section {
   display: flex;
   width: 100%;
   min-width: 100vw;
-
-  svg {
+}
+.wave-transition {
     width: 100%;
     height: auto;
-  }
 }
 .about-section {
   margin-top: -2px; /* to cover gap between sections */
