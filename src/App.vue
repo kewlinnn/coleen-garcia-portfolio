@@ -57,20 +57,20 @@
           </div>
 
           <div v-intersect class="about-education bs bottom-target">
-          <p class="txt-lg bold linear-gradient-text">Bachelor of Science in Computer Science</p>
-          <p class="txt-md bold">Technological University of the Philippines</p>
-          <p class="txt-sm italic">Cum Laude</p>
-          <div class="flex-group">
-            <div class="educ-item flex-align flex-gap-1">
-              <CalendarIcon :color="colors.softBlack" />
-              <span>2020 - 2024</span>
-            </div>
-            <div class="educ-item flex-align flex-gap-1">
-              <LocationIcon :color="colors.softBlack" />
-              <span>Manila, Philippines</span>
+            <p class="txt-lg bold linear-gradient-text">Bachelor of Science in Computer Science</p>
+            <p class="txt-md bold">Technological University of the Philippines</p>
+            <p class="txt-sm italic">Cum Laude</p>
+            <div class="flex-group">
+              <div class="educ-item flex-align flex-gap-1">
+                <CalendarIcon :color="colors.softBlack" />
+                <span>2020 - 2024</span>
+              </div>
+              <div class="educ-item flex-align flex-gap-1">
+                <LocationIcon :color="colors.softBlack" />
+                <span>Manila, Philippines</span>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </section>
