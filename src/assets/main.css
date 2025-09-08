@@ -381,6 +381,7 @@ section {
   }
 }
 .about-section {
+  margin-top: -2px; /* to cover gap between sections */
   padding-bottom: 1rem;
 }
 .about-content {
