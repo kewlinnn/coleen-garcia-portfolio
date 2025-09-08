@@ -350,7 +350,7 @@ const vIntersect = {
           observer.unobserve(entry.target); // stop observing after first trigger
         }
       },
-      { threshold: 0.1 } // adjust sensitivity
+      { threshold: 0.5 } // adjust sensitivity
     )
     observer.observe(el)
     el._observer = observer // store for cleanup
