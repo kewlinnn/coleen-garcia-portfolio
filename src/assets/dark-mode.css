@@ -63,3 +63,6 @@
 .dark-mode .stack {
   background-color: var(--grey-transparent);
 }
+.dark-mode .social-link {
+  filter: invert(100%);
+}
