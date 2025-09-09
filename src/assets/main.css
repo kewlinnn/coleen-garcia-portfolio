@@ -6,6 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s, color 0.3s;
 }
 /* Remove default margin */
 
@@ -160,7 +161,6 @@ body {
   font-weight: var(--font-weight-normal);
   margin: 0;
   padding: 0;
-  transition: background-color 0.3s, color 0.3s;
 
   /*grid background*/
   background-image:
@@ -205,11 +205,12 @@ section {
     padding: 0.5rem 1rem;
     text-decoration: none;
     color: var(--text-color-inverse);
+    border-radius: var(--border-radius-full);
+    overflow: hidden;
   }
   .navbar-item:hover {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.445);
-    border-radius: var(--border-radius-full);
     color: rgb(104, 31, 31);
   }
   .navbar-item:active {
@@ -444,7 +445,7 @@ section {
 }
 .tech-wrapper {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 .stack {
   display: flex;
@@ -452,6 +453,10 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0.5rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow-2);
+
 }
 .tech-image {
   height: 3rem;
@@ -644,7 +649,8 @@ section {
 .form-details textarea {
   resize: none;
 }
-.form-details input:focus, .form-details textarea:focus {
+.form-details input:focus,
+.form-details textarea:focus {
   outline: 2px solid var(--accent-color);
   background-color: #a0474710;
   color: var(--text-color-primary);

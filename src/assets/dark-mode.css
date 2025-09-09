@@ -1,14 +1,18 @@
 @import '../assets/base.css';
 
+.dark-mode, .dark-mode * {
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
 .dark-mode {
   --primary-color: #222;
+  --grey-transparent: #49494980;
   --secondary-color: #A04747;
   --accent-color: #D8A25E;
   --accent-color-light: #EEDF7A;
   --box-shadow-2: 0 0.125rem 0.25rem rgb(244, 244, 244, 0.1);
   --box-shadow-1: 0 0 10px rgb(244, 244, 244, 0.1);
 
-  --linear-gradient-text: linear-gradient(90deg, var(--secondary-color) 50%, var(--text-color-accent) 100%);
+  --linear-gradient-text: linear-gradient(90deg, #cf5d5d 50%, var(--accent-color) 100%);
   background-color: var(--primary-color);
   color: var(--text-color-inverse);
 }
@@ -29,7 +33,9 @@
 .dark-mode p,
 .dark-mode span,
 .dark-mode li,
-.dark-mode label {
+.dark-mode label,
+.dark-mode .form-details input,
+.dark-mode .form-details textarea {
   color: var(--text-color-inverse);
 }
 .hero-description.txt-lg {
@@ -53,4 +59,7 @@
 .dark-mode .form-btn {
   background: linear-gradient(90deg, var(--secondary-color) 0%, var(--accent-color) 100%);
   color: var(--text-color-inverse);
+}
+.dark-mode .stack {
+  background-color: var(--grey-transparent);
 }
