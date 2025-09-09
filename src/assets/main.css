@@ -197,6 +197,7 @@ section {
   border-radius: var(--border-radius-full);
   overflow: hidden;
   transition: all 0.3s ease;
+  box-shadow: var(--box-shadow-2);
 }
   .navbar-item {
     font-size: var(--font-size-normal);
@@ -253,6 +254,9 @@ section {
   white-space: nowrap;
   border-right: 3px solid var(--accent-color);
   animation: typewriter 6s steps(var(--letters), end) infinite, blink-caret 0.75s step-end infinite;
+}
+.hero-description.dark-mode {
+  color: var(--soft-black);
 }
 @media (max-width: 767.98px) {
   .hero-text {
@@ -436,6 +440,7 @@ section {
   width: 100%;
   max-width: 1000px;
   margin-bottom: 1rem;
+  box-shadow: var(--box-shadow-2);
 }
 .tech-wrapper {
   display: flex;

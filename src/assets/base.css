@@ -26,7 +26,7 @@
   --border-radius-lg: 0.5rem;
   --border-radius-full: 9999px;
   --box-shadow-2: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-  --box-shadow-1: box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  --box-shadow-1: 0 0 10px rgba(0,0,0,0.1);
 
   --font-weight-normal: 400;
   --font-weight-bold: 700;
