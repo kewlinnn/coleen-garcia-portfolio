@@ -8,7 +8,7 @@
   --box-shadow-2: 0 0.125rem 0.25rem rgb(244, 244, 244, 0.1);
   --box-shadow-1: 0 0 10px rgb(244, 244, 244, 0.1);
 
-  --linear-gradient-text: linear-gradient(90deg, var(--text-color-inverse) 50%, var(--secondary-color) 100%);
+  --linear-gradient-text: linear-gradient(90deg, var(--secondary-color) 50%, var(--text-color-accent) 100%);
   background-color: var(--primary-color);
   color: var(--text-color-inverse);
 }
@@ -22,19 +22,35 @@
     linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
-.timeline-item.dark-mode {
-  background-color: red;
-}
-
 .dark-mode h1,
 .dark-mode h2,
 .dark-mode h3,
 .dark-mode h5,
 .dark-mode p,
 .dark-mode span,
-.dark-mode li {
+.dark-mode li,
+.dark-mode label {
   color: var(--text-color-inverse);
 }
 .hero-description.txt-lg {
   color: var(--soft-black);
+}
+.stack-item.dark-mode {
+  color: var(--text-color-secondary);
+}
+.dark-mode .cta-1:hover {
+  color: var(--text-color-inverse);
+  border: 1px solid var(--text-color-inverse)
+}
+.dark-mode .cta-2:hover {
+  color: var(--accent-color-light);
+  border: 1px solid var(--accent-color-light);
+}
+.dark-mode .fc-secondary,
+.dark-mode .project-type {
+  color: var(--accent-color);
+}
+.dark-mode .form-btn {
+  background: linear-gradient(90deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+  color: var(--text-color-inverse);
 }

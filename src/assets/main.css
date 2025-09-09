@@ -313,9 +313,9 @@ section {
     transform: translateY(2px); /* lift effect on click */
   }
 .cta-1 {
-  background-color: var(--soft-black);
+  background-color: var(--text-color-secondary);
   color: var(--text-color-inverse);
-  border: 2px solid var(--text-color-secondary);
+  border: 2px solid var(--soft-black);
 }
   .cta-1:hover {
     background-color: var(--primary-color);
