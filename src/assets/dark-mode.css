@@ -59,10 +59,11 @@
 .dark-mode .form-btn {
   background: linear-gradient(90deg, var(--secondary-color) 0%, var(--accent-color) 100%);
   color: var(--text-color-inverse);
+  transition: background 0.3s ease, color 0.3s ease;
 }
-/* .dark-mode .form-btn:hover {
-  
-} */
+.dark-mode .form-btn:hover {
+  background: linear-gradient(90deg, var(--text-color-secondary) 0%, var(--accent-color) 100%);
+}
 .dark-mode .tech-image {
   background-color: var(--grey-transparent);
 }
