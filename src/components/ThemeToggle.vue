@@ -60,7 +60,7 @@ onMounted(() => {
 }
 .theme-toggle.dark {
   background: var(--primary-color);
-  box-shadow: 0 0 5px 0px var(--accent-color-light), var(--box-shadow-2);
+  box-shadow: 0 0 5px 0px var(--accent-color), var(--box-shadow-2);
 }
 .light-mode-icon {
   background-color: var(--primary-color);
@@ -69,6 +69,6 @@ onMounted(() => {
   fill: var(--secondary-color);
 }
 .dark-mode-icon svg {
-  fill: var(--accent-color-light);
+  fill: var(--accent-color);
 }
 </style>
