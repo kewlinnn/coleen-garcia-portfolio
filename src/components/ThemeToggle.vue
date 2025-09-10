@@ -41,29 +41,26 @@ onMounted(() => {
   height: 3rem;
   width: 3rem;
   background: var(--primary-color);
-  border: 1px solid var(--secondary-color);
+  border: none;
   cursor: pointer;
   padding: 0.5rem;
   border-radius: var(--border-radius-full);
   box-shadow: var(--box-shadow-2);
+  box-shadow: 0 0 5px 0px var(--secondary-color), var(--box-shadow-2);
   transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
   position: fixed;
   top: 1rem;
   right: 1rem;
 }
 .theme-toggle:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 2px 2px var(--secondary-color), var(--box-shadow-2);
+  transform: scale(1.2);
 }
 .theme-toggle:active {
   transform: scale(0.95);
 }
 .theme-toggle.dark {
   background: var(--primary-color);
-  border: 1px solid var(--text-color-inverse);
-}
-.theme-toggle.dark:hover {
-  box-shadow: 0 0 2px 2px var(--text-color-inverse), var(--box-shadow-2);
+  box-shadow: 0 0 5px 0px var(--accent-color-light), var(--box-shadow-2);
 }
 .light-mode-icon {
   background-color: var(--primary-color);
@@ -72,6 +69,6 @@ onMounted(() => {
   fill: var(--secondary-color);
 }
 .dark-mode-icon svg {
-  fill: var(--text-color-inverse);
+  fill: var(--accent-color-light);
 }
 </style>
