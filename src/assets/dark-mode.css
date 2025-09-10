@@ -1,0 +1,80 @@
+@import '../assets/base.css';
+
+.dark-mode {
+  --primary-color: #222;
+  --grey-transparent: #f1f1f1e1;
+  --secondary-color: #A04747;
+  --accent-color: #D8A25E;
+  --accent-color-light: #EEDF7A;
+  --box-shadow-2: 0 0.125rem 0.25rem rgb(244, 244, 244, 0.1);
+  --box-shadow-1: 0 0 10px rgb(244, 244, 244, 0.1);
+  
+  --linear-gradient-text: linear-gradient(90deg, #cf5d5d 50%, var(--accent-color) 100%);
+  background-color: var(--primary-color);
+  color: var(--text-color-inverse);
+}
+.dark-mode.bs {
+  box-shadow: var(--box-shadow-2);
+  -webkit-box-shadow: 0px 2px 5px 1px #f4f4f4;
+  -moz-box-shadow: 0px 2px 5px 1px #f4f4f4;
+}
+.dark-mode body {
+  background-image:
+  linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h5,
+.dark-mode p,
+.dark-mode span,
+.dark-mode li,
+.dark-mode label,
+.dark-mode .form-details input,
+.dark-mode .form-details textarea {
+  color: var(--text-color-inverse);
+}
+.hero-description.txt-lg {
+  color: var(--soft-black);
+}
+.stack-item.dark-mode {
+  color: var(--text-color-secondary);
+}
+.dark-mode .cta-button {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease, border 0.3s ease;
+}
+.dark-mode .cta-1:hover {
+  color: var(--text-color-inverse);
+  border: 2px solid var(--text-color-inverse)
+}
+.dark-mode .cta-2:hover {
+  color: var(--accent-color-light);
+  border: 2px solid var(--accent-color-light);
+}
+.dark-mode .fc-secondary,
+.dark-mode .project-type {
+  color: var(--accent-color);
+}
+.dark-mode .form-btn {
+  background: linear-gradient(90deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+  background-size: 200% 100%;
+  background-position: left;
+  color: var(--text-color-inverse);
+  transition: background-position 0.2s ease-in-out, transform 0.1s ease;
+}
+.dark-mode .form-btn:hover {
+  background-position: right;
+}
+.dark-mode .tech-image {
+  background-color: var(--grey-transparent);
+}
+.dark-mode .social-link {
+  filter: invert(100%);
+}
+.dark-mode .icon {
+  fill: var(--text-color-inverse);
+}
+.dark-mode, .dark-mode > * {
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
