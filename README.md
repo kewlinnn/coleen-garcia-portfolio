@@ -10,21 +10,25 @@ A modern, responsive portfolio website showcasing my journey as a web developer,
 - **Technical Skills**: Comprehensive display of frontend, backend, and development tools
 - **Experience Timeline**: Visual timeline of internship experiences
 - **Project Showcase**: Featured projects with live demos and source code links
-- **Contact Form**: Functional contact form for direct communication
+- **Contact Form**: Functional contact form with backend API integration and rate limiting
+- **Email Integration**: Automated email delivery using MailerSend API
 - **Social Integration**: Links to LinkedIn and GitHub profiles
 - **Modern UI/UX**: Clean design with smooth animations and transitions
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **Vue.js 3** - Progressive JavaScript framework
-- **Vite** - Fast build tool and development server
+- **Vue.js 3** - Progressive JavaScript framework (v3.5.17)
+- **Vite** - Fast build tool and development server (v7.0.0)
 - **HTML5** - Semantic markup
 - **CSS3** - Modern styling with flexbox and grid
 - **JavaScript (ES6+)** - Interactive functionality
 
+### Backend
+- **Node.js** - Serverless API functions
+- **MailerSend API** - Email delivery service integration
+
 ### Development Tools
-- **Node.js** - Runtime environment
 - **npm** - Package management
 - **Git** - Version control
 - **VS Code** - Development environment
@@ -69,6 +73,18 @@ npm run build
 npm run preview
 ```
 
+## ⚙️ Environment Variables
+
+For the contact form to work properly, you'll need to set up the following environment variables:
+
+```bash
+MAILERSEND_API_KEY=your_mailersend_api_key
+FROM_EMAIL=your_verified_sender_email
+TO_EMAIL=your_recipient_email
+```
+
+Create a `.env` file in the root directory or configure these in your deployment platform.
+
 ## 🎯 Usage
 
 The portfolio is a single-page application with the following sections:
@@ -84,6 +100,16 @@ The portfolio is a single-page application with the following sections:
 
 Visit the live portfolio: [Coming Soon]
 
+## 🚀 Deployment
+
+This portfolio includes serverless API functions for the contact form. Deploy to platforms that support serverless functions:
+
+- **Vercel** (Recommended): Automatic deployment with API routes
+- **Netlify**: Supports Netlify Functions
+- **Other platforms**: Ensure they support serverless/edge functions
+
+The contact form requires the environment variables listed above to be configured in your deployment platform.
+
 ## 🎨 Project Structure
 
 ```
@@ -95,6 +121,13 @@ src/
 │   └── main.css         # Global styles
 ├── App.vue              # Main application component
 └── main.js              # Application entry point
+
+api/
+└── contact.js           # Contact form API endpoint
+
+public/
+├── CG-icon.png          # Favicon and site icon
+└── images/              # Public image assets
 ```
 
 ## 📧 Contact
