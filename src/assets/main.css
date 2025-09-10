@@ -307,7 +307,7 @@ section {
   border-radius: var(--border-radius-full);
   border: none;
   box-shadow: var(--box-shadow-2);
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease, border 0.1s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease, border 0.5s ease;
   cursor: pointer;
 }
   .cta-button:active {

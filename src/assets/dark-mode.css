@@ -42,15 +42,15 @@
   color: var(--text-color-secondary);
 }
 .dark-mode .cta-button {
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease, border 0.1s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease, border 0.3s ease;
 }
 .dark-mode .cta-1:hover {
   color: var(--text-color-inverse);
-  border: 1px solid var(--text-color-inverse)
+  border: 2px solid var(--text-color-inverse)
 }
 .dark-mode .cta-2:hover {
   color: var(--accent-color-light);
-  border: 1px solid var(--accent-color-light);
+  border: 2px solid var(--accent-color-light);
 }
 .dark-mode .fc-secondary,
 .dark-mode .project-type {
@@ -60,6 +60,9 @@
   background: linear-gradient(90deg, var(--secondary-color) 0%, var(--accent-color) 100%);
   color: var(--text-color-inverse);
 }
+/* .dark-mode .form-btn:hover {
+  
+} */
 .dark-mode .tech-image {
   background-color: var(--grey-transparent);
 }
