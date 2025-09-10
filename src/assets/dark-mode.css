@@ -2,7 +2,7 @@
 
 .dark-mode {
   --primary-color: #222;
-  --grey-transparent: #49494980;
+  --grey-transparent: #f1f1f1e1;
   --secondary-color: #A04747;
   --accent-color: #D8A25E;
   --accent-color-light: #EEDF7A;
@@ -60,7 +60,7 @@
   background: linear-gradient(90deg, var(--secondary-color) 0%, var(--accent-color) 100%);
   color: var(--text-color-inverse);
 }
-.dark-mode .stack {
+.dark-mode .tech-image {
   background-color: var(--grey-transparent);
 }
 .dark-mode .social-link {
