@@ -41,7 +41,7 @@ onMounted(() => {
   height: 3rem;
   width: 3rem;
   background: var(--primary-color);
-  border: none;
+  border: 1px solid var(--secondary-color);
   cursor: pointer;
   padding: 0.5rem;
   border-radius: var(--border-radius-full);
@@ -59,10 +59,11 @@ onMounted(() => {
   transform: scale(0.95);
 }
 .theme-toggle.dark {
-  background: var(--secondary-color);
+  background: var(--primary-color);
+  border: 1px solid var(--text-color-inverse);
 }
 .theme-toggle.dark:hover {
-  box-shadow: 0 0 2px 2px var(--primary-color), var(--box-shadow-2);
+  box-shadow: 0 0 2px 2px var(--text-color-inverse), var(--box-shadow-2);
 }
 .light-mode-icon {
   background-color: var(--primary-color);
@@ -71,6 +72,6 @@ onMounted(() => {
   fill: var(--secondary-color);
 }
 .dark-mode-icon svg {
-  fill: var(--primary-color);
+  fill: var(--text-color-inverse);
 }
 </style>
