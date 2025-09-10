@@ -98,13 +98,14 @@ The portfolio is a single-page application with the following sections:
 
 ## 📱 Demo
 
-Visit the live portfolio: [Coming Soon]
+Visit the live portfolio: [www.coleen.dev](https://www.coleen.dev)
+
 
 ## 🚀 Deployment
 
-This portfolio includes serverless API functions for the contact form. Deploy to platforms that support serverless functions:
+This portfolio is deployed on **Vercel** and includes serverless API functions for the contact form. You can also deploy to other platforms that support serverless functions:
 
-- **Vercel** (Recommended): Automatic deployment with API routes
+- **Vercel** (Recommended): Automatic deployment with API routes (this project is live at [www.coleen.dev](https://www.coleen.dev) via Vercel)
 - **Netlify**: Supports Netlify Functions
 - **Other platforms**: Ensure they support serverless/edge functions
 
