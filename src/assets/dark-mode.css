@@ -1,8 +1,5 @@
 @import '../assets/base.css';
 
-.dark-mode, .dark-mode * {
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-}
 .dark-mode {
   --primary-color: #222;
   --grey-transparent: #49494980;
@@ -11,7 +8,7 @@
   --accent-color-light: #EEDF7A;
   --box-shadow-2: 0 0.125rem 0.25rem rgb(244, 244, 244, 0.1);
   --box-shadow-1: 0 0 10px rgb(244, 244, 244, 0.1);
-
+  
   --linear-gradient-text: linear-gradient(90deg, #cf5d5d 50%, var(--accent-color) 100%);
   background-color: var(--primary-color);
   color: var(--text-color-inverse);
@@ -23,8 +20,8 @@
 }
 .dark-mode body {
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 .dark-mode h1,
 .dark-mode h2,
@@ -43,6 +40,9 @@
 }
 .stack-item.dark-mode {
   color: var(--text-color-secondary);
+}
+.dark-mode .cta-button {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease, border 0.1s ease;
 }
 .dark-mode .cta-1:hover {
   color: var(--text-color-inverse);
@@ -65,4 +65,7 @@
 }
 .dark-mode .social-link {
   filter: invert(100%);
+}
+.dark-mod, .dark-mode > * {
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
