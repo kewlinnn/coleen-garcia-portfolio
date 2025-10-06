@@ -22,7 +22,7 @@
             >Coleen Garcia</span
           >
         </h1>
-        <h2 class="hero-job">Software Developer</h2>
+        <h2 class="hero-job">Software Engineer</h2>
         <p class="hero-description txt-lg">
           I build modern responsive web & mobile apps
         </p>
